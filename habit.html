@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vitals — Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   VITALS — DESIGN TOKENS
+   calm · warm · non-clinical · encouraging · soft rounded
+   ============================================================ */
+:root{
+  --bg:#FAF7F2;
+  --surface:#FFFFFF;
+  --surface-2:#F4F1EA;
+  --ink:#23202A;
+  --ink-soft:#6B6675;
+  --ink-faint:#A8A2B0;
+  --line:#ECE7DF;
+
+  --primary:#5B8DEF;
+  --primary-soft:#E8F0FE;
+  --adhd:#7C5CFF;
+  --adhd-soft:#EFEAFE;
+  --pain:#E76F51;
+  --pain-soft:#FBE9E2;
+  --surgery:#2A9D8F;
+  --surgery-soft:#E0F2EF;
+
+  --good:#3DAE6B;
+  --good-soft:#E2F4EA;
+  --warn:#E45A3B;
+  --warn-soft:#FBE5DD;
+  --sun:#F4B740;
+
+  --radius-xl:26px;
+  --radius-lg:20px;
+  --radius-md:14px;
+  --radius-sm:10px;
+  --shadow:0 10px 30px -12px rgba(53,46,66,.18);
+  --shadow-soft:0 4px 14px -8px rgba(53,46,66,.18);
+
+  --font-head:'Plus Jakarta Sans',system-ui,sans-serif;
+  --font-body:'Inter',system-ui,sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{
+  font-family:var(--font-body);
+  background:linear-gradient(180deg,#F3EEE6 0%,#FAF7F2 40%);
+  color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.65;
+  font-size:15.5px;
+}
+h1,h2,h3,h4{font-family:var(--font-head);letter-spacing:-.02em}
+
+/* ---------- Top Bar ---------- */
+.topbar{
+  position:sticky;top:0;z-index:100;
+  background:rgba(250,247,242,.82);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+  padding:0 24px;
+  height:64px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.topbar .brand{
+  display:flex;align-items:center;gap:10px;
+  font-family:var(--font-head);font-weight:800;font-size:17px;
+  text-decoration:none;color:var(--ink);
+}
+.topbar .brand .dot{
+  width:28px;height:28px;border-radius:9px;
+  background:linear-gradient(135deg,var(--primary),var(--adhd));
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:13px;font-weight:800;
+}
+.topbar .nav-links{display:flex;gap:6px}
+.topbar .nav-links a{
+  font-size:13px;font-weight:600;color:var(--ink-soft);
+  text-decoration:none;padding:7px 14px;border-radius:999px;
+  transition:all .2s;
+}
+.topbar .nav-links a:hover{background:var(--surface);color:var(--ink);box-shadow:var(--shadow-soft)}
+
+/* ---------- Hero ---------- */
+.hero{
+  max-width:780px;margin:0 auto;
+  padding:72px 28px 48px;
+  text-align:center;
+}
+.hero .badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--surface);border:1px solid var(--line);
+  box-shadow:var(--shadow-soft);
+  padding:8px 16px;border-radius:999px;
+  font-size:12.5px;font-weight:600;color:var(--ink-soft);
+  margin-bottom:22px;
+}
+.hero .badge .ico{font-size:14px}
+.hero h1{
+  font-size:clamp(32px,5vw,48px);font-weight:800;line-height:1.08;
+  margin-bottom:18px;
+}
+.hero h1 em{font-style:normal;color:var(--primary)}
+.hero .subtitle{
+  color:var(--ink-soft);font-size:17px;line-height:1.65;max-width:560px;margin:0 auto 28px;
+}
+.hero .meta-row{
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:center;
+}
+.hero .meta-chip{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--surface-2);padding:7px 14px;border-radius:999px;
+  font-size:12.5px;font-weight:600;color:var(--ink-soft);
+}
+
+/* ---------- Layout ---------- */
+.page-wrap{
+  max-width:1120px;margin:0 auto;
+  padding:0 28px 100px;
+  display:grid;
+  grid-template-columns:240px 1fr;
+  gap:48px;
+  align-items:start;
+}
+
+/* ---------- Sidebar / TOC ---------- */
+.toc{
+  position:sticky;top:90px;
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius-lg);box-shadow:var(--shadow-soft);
+  padding:20px 18px;
+}
+.toc .toc-label{
+  font-family:var(--font-head);font-weight:700;font-size:11px;
+  text-transform:uppercase;letter-spacing:.08em;color:var(--ink-faint);
+  margin-bottom:12px;
+}
+.toc a{
+  display:flex;align-items:center;gap:8px;
+  padding:8px 10px;border-radius:var(--radius-sm);
+  text-decoration:none;font-size:13px;font-weight:500;
+  color:var(--ink-soft);transition:all .2s;line-height:1.35;
+}
+.toc a:hover{background:var(--surface-2);color:var(--ink)}
+.toc a.active{background:var(--primary-soft);color:var(--primary);font-weight:600}
+.toc a .num{
+  width:22px;height:22px;border-radius:7px;
+  background:var(--surface-2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:10px;font-weight:700;color:var(--ink-faint);flex-shrink:0;
+}
+.toc a.active .num{background:var(--primary);color:#fff}
+
+/* ---------- Content ---------- */
+.content{min-width:0}
+.content h2{
+  font-size:24px;font-weight:800;line-height:1.2;
+  margin:56px 0 8px;
+  display:flex;align-items:center;gap:12px;
+}
+.content h2:first-child{margin-top:0}
+.content h2 .sec-num{
+  width:34px;height:34px;border-radius:10px;
+  background:var(--primary-soft);color:var(--primary);
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;font-weight:800;flex-shrink:0;
+}
+.content h3{
+  font-size:17px;font-weight:700;margin:28px 0 8px;color:var(--ink);
+}
+.content p{margin:0 0 16px;color:var(--ink-soft)}
+.content strong{color:var(--ink);font-weight:600}
+.content ul{margin:0 0 16px;padding-left:0;list-style:none}
+.content ul li{
+  position:relative;padding:6px 0 6px 24px;
+  color:var(--ink-soft);
+}
+.content ul li::before{
+  content:'';position:absolute;left:4px;top:14px;
+  width:7px;height:7px;border-radius:50%;
+  background:var(--primary-soft);border:2px solid var(--primary);
+}
+.content a{color:var(--primary);text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- Info Cards ---------- */
+.info-card{
+  border-radius:var(--radius-md);padding:16px 18px;
+  display:flex;gap:12px;align-items:flex-start;
+  font-size:13.5px;line-height:1.55;margin:20px 0;
+}
+.info-card.blue{background:var(--primary-soft);color:#3a5f9e}
+.info-card.purple{background:var(--adhd-soft);color:#5a3fb8}
+.info-card.coral{background:var(--pain-soft);color:#a4422a}
+.info-card.teal{background:var(--surgery-soft);color:#1d6f66}
+.info-card.green{background:var(--good-soft);color:#1d6f44}
+.info-card .ic{font-size:20px;flex-shrink:0;margin-top:1px}
+.info-card b{font-weight:700}
+
+/* ---------- Data Table ---------- */
+.data-table{
+  width:100%;border-collapse:separate;border-spacing:0;
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius-md);overflow:hidden;
+  margin:20px 0 24px;font-size:13.5px;
+}
+.data-table th{
+  background:var(--surface-2);text-align:left;
+  padding:12px 16px;font-weight:700;font-size:12px;
+  text-transform:uppercase;letter-spacing:.05em;color:var(--ink-faint);
+  border-bottom:1px solid var(--line);
+}
+.data-table td{
+  padding:12px 16px;border-bottom:1px solid var(--line);
+  color:var(--ink-soft);vertical-align:top;
+}
+.data-table tr:last-child td{border-bottom:none}
+.data-table td:first-child{font-weight:600;color:var(--ink);min-width:140px}
+
+/* ---------- Collapsible ---------- */
+details{
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius-md);margin:12px 0;
+  overflow:hidden;transition:box-shadow .25s;
+}
+details[open]{box-shadow:var(--shadow-soft)}
+details summary{
+  padding:16px 18px;cursor:pointer;
+  display:flex;align-items:center;gap:10px;
+  font-weight:700;font-size:14.5px;font-family:var(--font-head);
+  list-style:none;user-select:none;
+}
+details summary::-webkit-details-marker{display:none}
+details summary::after{
+  content:'';margin-left:auto;
+  width:20px;height:20px;border-radius:50%;
+  background:var(--surface-2);
+  display:flex;align-items:center;justify-content:center;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236B6675' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:center;
+  flex-shrink:0;transition:transform .25s;
+}
+details[open] summary::after{transform:rotate(180deg)}
+details .det-body{
+  padding:0 18px 18px;
+  color:var(--ink-soft);font-size:14px;line-height:1.65;
+}
+details .det-body p:last-child{margin-bottom:0}
+
+/* ---------- Divider ---------- */
+.divider{
+  height:1px;background:var(--line);margin:40px 0;
+}
+
+/* ---------- Right Highlight Block ---------- */
+.highlight-block{
+  background:var(--surface);border:1px solid var(--line);
+  border-left:4px solid var(--primary);
+  border-radius:0 var(--radius-md) var(--radius-md) 0;
+  padding:18px 20px;margin:20px 0;
+}
+.highlight-block.purple{border-left-color:var(--adhd)}
+.highlight-block.coral{border-left-color:var(--pain)}
+.highlight-block.teal{border-left-color:var(--surgery)}
+.highlight-block.green{border-left-color:var(--good)}
+.highlight-block b{display:block;margin-bottom:4px;font-family:var(--font-head);font-size:14px}
+.highlight-block p{margin:0;font-size:13.5px;color:var(--ink-soft);line-height:1.55}
+
+/* ---------- Contact Section ---------- */
+.contact-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:20px 0;
+}
+.contact-card{
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius-md);padding:18px;
+  text-align:center;
+}
+.contact-card .cc-icon{
+  width:44px;height:44px;border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;margin:0 auto 10px;
+}
+.contact-card b{display:block;font-size:13.5px;font-family:var(--font-head);margin-bottom:4px}
+.contact-card span{font-size:12.5px;color:var(--ink-soft)}
+
+/* ---------- Print Button ---------- */
+.print-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--surface);border:1.5px solid var(--line);
+  padding:10px 20px;border-radius:999px;
+  font-weight:700;font-size:13px;font-family:var(--font-head);
+  color:var(--ink);cursor:pointer;transition:all .2s;
+}
+.print-btn:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+/* ---------- Footer ---------- */
+.footer{
+  max-width:780px;margin:0 auto;
+  padding:40px 28px 60px;
+  text-align:center;
+}
+.footer .f-brand{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--font-head);font-weight:800;font-size:15px;
+  margin-bottom:12px;
+}
+.footer .f-brand .dot{
+  width:20px;height:20px;border-radius:7px;
+  background:linear-gradient(135deg,var(--primary),var(--adhd));
+}
+.footer p{color:var(--ink-faint);font-size:13px;line-height:1.55}
+
+/* ---------- Toast ---------- */
+.toast{
+  position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(100px);
+  background:var(--ink);color:#fff;
+  padding:14px 24px;border-radius:999px;
+  font-size:13.5px;font-weight:600;font-family:var(--font-head);
+  box-shadow:0 16px 40px -12px rgba(35,32,42,.4);
+  z-index:200;opacity:0;transition:all .4s cubic-bezier(.175,.885,.32,1.275);
+  pointer-events:none;
+}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+
+/* ---------- Responsive ---------- */
+@media(max-width:860px){
+  .page-wrap{grid-template-columns:1fr;gap:0}
+  .toc{
+    position:relative;top:0;
+    margin-bottom:32px;
+  }
+  .topbar .nav-links{display:none}
+  .hero{padding:48px 20px 32px}
+  .hero h1{font-size:30px}
+}
+@media(max-width:480px){
+  body{font-size:14.5px}
+  .hero h1{font-size:26px}
+  .content h2{font-size:20px}
+  .data-table{font-size:12px}
+  .data-table td:first-child{min-width:100px}
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(18px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.fade-up{animation:fadeUp .55s ease-out both}
+.fade-up-d1{animation-delay:.08s}
+.fade-up-d2{animation-delay:.16s}
+.fade-up-d3{animation-delay:.24s}
+
+/* Scroll reveal */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .5s ease,transform .5s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+@media print{
+  .topbar,.toc,.print-btn,.toast{display:none!important}
+  body{background:#fff;padding:0}
+  .hero{padding:24px 0}
+  .page-wrap{display:block;padding:0 0 40px}
+  .info-card,.highlight-block{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<!-- ====================== TOP BAR ====================== -->
+<nav class="topbar">
+  <a href="#" class="brand">
+    <span class="dot">V</span>
+    Vitals
+  </a>
+  <div class="nav-links">
+    <a href="#top">Privacy</a>
+    <a href="#data-rights">Your Rights</a>
+    <a href="#contact">Contact</a>
+    <button class="print-btn" onclick="window.print()" style="margin-left:6px">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+      Print
+    </button>
+  </div>
+</nav>
+
+<!-- ====================== HERO ====================== -->
+<section class="hero fade-up" id="top">
+  <div class="badge"><span class="ico">🔒</span> Privacy Policy</div>
+  <h1>Your health data is <em>yours.</em><br>Always.</h1>
+  <p class="subtitle">We built Vitals on a simple principle: health information should never be monetized, sold, or used to target you. This page explains exactly what we collect, why, and how you stay in control.</p>
+  <div class="meta-row">
+    <span class="meta-chip">📅 Last updated: July 10, 2025</span>
+    <span class="meta-chip">📋 Version 2.1</span>
+    <span class="meta-chip">🛡️ GDPR & CCPA compliant</span>
+  </div>
+</section>
+
+<!-- ====================== MAIN LAYOUT ====================== -->
+<div class="page-wrap">
+
+  <!-- ---------- TABLE OF CONTENTS ---------- -->
+  <aside class="toc fade-up fade-up-d1" id="toc-sidebar">
+    <div class="toc-label">On this page</div>
+    <a href="#info-collected" class="active"><span class="num">1</span> Information We Collect</a>
+    <a href="#how-we-use"><span class="num">2</span> How We Use It</a>
+    <a href="#data-storage"><span class="num">3</span> Storage &amp; Security</a>
+    <a href="#sharing"><span class="num">4</span> Sharing &amp; Third Parties</a>
+    <a href="#data-rights"><span class="num">5</span> Your Rights &amp; Choices</a>
+    <a href="#retention"><span class="num">6</span> Data Retention</a>
+    <a href="#children"><span class="num">7</span> Children's Privacy</a>
+    <a href="#ccpa"><span class="num">8</span> California Privacy</a>
+    <a href="#gdpr"><span class="num">9</span> GDPR for EU Users</a>
+    <a href="#changes"><span class="num">10</span> Policy Changes</a>
+    <a href="#contact"><span class="num">11</span> Contact Us</a>
+  </aside>
+
+  <!-- ---------- CONTENT ---------- -->
+  <main class="content fade-up fade-up-d2">
+
+    <!-- Section 1 -->
+    <h2 id="info-collected"><span class="sec-num">1</span> Information We Collect</h2>
+
+    <p>We only collect data that directly serves your experience. Nothing extra, nothing hidden.</p>
+
+    <div class="info-card blue">
+      <span class="ic">💡</span>
+      <span><b>Local-first architecture.</b> Most of your data stays on your device. We only sync what you explicitly choose to back up. You can use Vitals entirely offline.</span>
+    </div>
+
+    <h3>Data You Provide</h3>
+    <ul>
+      <li><strong>Account info</strong> — Email address and display name (if you create an account; local-only mode requires none)</li>
+      <li><strong>Health entries</strong> — Habit logs, check-in responses (energy, pain, spoons), mood notes, trigger tags, and partial/skip reasons you enter</li>
+      <li><strong>Condition preferences</strong> — Selected condition pack(s) (e.g., ADHD, Chronic Pain), routine templates, and reminder schedules</li>
+      <li><strong>Optional profile</strong> — Time zone, typical wake/sleep times (used to schedule reminders), care-team sharing preferences</li>
+    </ul>
+
+    <h3>Data Collected Automatically</h3>
+    <ul>
+      <li><strong>Usage analytics</strong> — Screen visits, feature interaction frequencies, crash reports (anonymized; see Section 4)</li>
+      <li><strong>Device info</strong> — OS version, app version, device model (for compatibility and bug fixing)</li>
+      <li><strong>Notifications</strong> — Delivery receipts and open timestamps (solely to improve reminder reliability)</li>
+    </ul>
+
+    <h3>What We Never Collect</h3>
+
+    <div class="highlight-block coral">
+      <b>🚫 Hard boundaries — no exceptions</b>
+      <p>We never collect precise geolocation, contacts, photos, browser history, financial information, or biometric data. We never build advertising profiles. We never sell personal data under any circumstances.</p>
+    </div>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Data Type</th><th>Collected</th><th>Purpose</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Email</td><td>✅ If account created</td><td>Authentication, backup sync</td></tr>
+        <tr><td>Habit logs &amp; check-ins</td><td>✅ User-entered</td><td>Personalized adaptive engine</td></tr>
+        <tr><td>Condition selection</td><td>✅ User-selected</td><td>Tailor routines &amp; insights</td></tr>
+        <tr><td>Crash reports</td><td>✅ Automatic</td><td>App stability</td></tr>
+        <tr><td>Location</td><td>❌ Never</td><td>—</td></tr>
+        <tr><td>Contacts</td><td>❌ Never</td><td>—</td></tr>
+        <tr><td>Advertising identifiers</td><td>❌ Never</td><td>—</td></tr>
+        <tr><td>Biometrics</td><td>❌ Never</td><td>—</td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <!-- Section 2 -->
+    <h2 id="how-we-use"><span class="sec-num">2</span> How We Use Your Information</h2>
+
+    <p>Every data point we handle maps to a specific, beneficial purpose. We don't collect first and find uses later.</p>
+
+    <details>
+      <summary>🎯 Adaptive routine engine</summary>
+      <div class="det-body">
+        <p>Your check-in data (energy, symptoms, spoons) powers the adaptive engine that adjusts your daily habit list — scaling down on flare days, reordering by energy level, and protecting your streak when you log a valid skip reason. This processing happens <strong>on-device</strong> whenever possible.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>📊 Insights &amp; consistency scoring</summary>
+      <div class="det-body">
+        <p>We calculate your consistency score, streaks, and trend patterns locally. These help you see patterns over time — like which triggers precede flares or which habits correlate with better days. No data leaves your device for this.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>☁️ Cloud backup &amp; sync (optional)</summary>
+      <div class="det-body">
+        <p>If you create an account, your data syncs via end-to-end encrypted channels so you can restore it on a new device. We cannot read your health data in transit or at rest. The server only sees encrypted blobs.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>🔔 Reminders &amp; notifications</summary>
+      <div class="det-body">
+        <p>Reminder schedules you set are processed locally. If you enable cross-device sync, push notification tokens are stored server-side solely to deliver your reminders. We track delivery/open rates only to fix reliability issues.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>🛠️ App stability &amp; improvement</summary>
+      <div class="det-body">
+        <p>Anonymized crash reports and aggregate feature-usage counts help us fix bugs and decide where to invest development effort. Usage data is stripped of all personal identifiers before it reaches our analytics provider.</p>
+      </div>
+    </details>
+
+    <div class="info-card purple">
+      <span class="ic">🧠</span>
+      <span><b>ADHD-friendly by design.</b> We don't use dark patterns, infinite scroll metrics, or engagement-maximizing hooks. Our analytics measure whether features help — not how long we can keep you in the app.</span>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Section 3 -->
+    <h2 id="data-storage"><span class="sec-num">3</span> Storage &amp; Security</h2>
+
+    <h3>On-Device Storage</h3>
+    <p>All health data you enter is stored in your device's secure enclave / encrypted local storage. This means:</p>
+    <ul>
+      <li>Data is encrypted at rest on your device</li>
+      <li>Other apps cannot access it</li>
+      <li>It remains available offline</li>
+      <li>You can delete it at any time by clearing app data</li>
+    </ul>
+
+    <h3>Cloud Storage (Account Holders Only)</h3>
+    <p>If you opt into cloud backup:</p>
+    <ul>
+      <li><strong>Encryption</strong> — AES-256 at rest; TLS 1.3 in transit. We use end-to-end encryption so even our infrastructure team cannot read your data</li>
+      <li><strong>Hosting</strong> — Data is stored on SOC 2 Type II certified infrastructure within the EU and US</li>
+      <li><strong>Access controls</strong> — No employee has routine access to user data. Break-glass procedures require VP-level approval and are audit-logged</li>
+    </ul>
+
+    <div class="highlight-block green">
+      <b>🔐 Zero-knowledge health data</b>
+      <p>Your health entries are encrypted with a key derived from your password. We don't hold the decryption key. Even if our servers were compromised, your health data would remain unreadable ciphertext.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Section 4 -->
+    <h2 id="sharing"><span class="sec-num">4</span> Sharing &amp; Third Parties</h2>
+
+    <p>We do not sell, rent, or trade your personal data. Full stop.</p>
+
+    <h3>Who We Share With</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>Recipient</th><th>Data Shared</th><th>Reason</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Cloud infrastructure</td><td>Encrypted blobs only</td><td>Backup &amp; sync (you opt in)</td></tr>
+        <tr><td>Push notification service</td><td>Device token + reminder text</td><td>Deliver your reminders</td></tr>
+        <tr><td>Analytics provider</td><td>Anonymized, aggregate only</td><td>Crash reports &amp; feature usage</td></tr>
+        <tr><td>Your care team</td><td>Only what you choose</td><td>You explicitly share a report</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Care-Team Sharing</h3>
+    <p>Vitals lets you generate a read-only summary report to share with a doctor, therapist, or accountability partner. You choose:</p>
+    <ul>
+      <li>What time range to include</li>
+      <li>Which habits and metrics to show</li>
+      <li>Whether to share via secure link (expires in 72 hours) or PDF export</li>
+    </ul>
+
+    <div class="info-card teal">
+      <span class="ic">🩺</span>
+      <span><b>You are the gatekeeper.</b> No one sees your data unless you explicitly send it. Care-team links are read-only, time-limited, and revocable at any time.</span>
+    </div>
+
+    <h3>Legal Requirements</h3>
+    <p>We may disclose data if required by law, such as a valid court order or subpoena. We will notify you via email before disclosure unless legally prohibited. To date, we have <strong>never</strong> received or complied with such a request.</p>
+
+    <h3>No Advertising. Ever.</h3>
+    <div class="highlight-block coral">
+      <b>🚫 Advertising is not our business</b>
+      <p>We have no ad SDKs, no ad identifiers, no retargeting pixels, and no commercial relationship with any data broker. Our revenue comes solely from optional premium subscriptions. Your health data will never fund an ad network.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Section 5 -->
+    <h2 id="data-rights"><span class="sec-num">5</span> Your Rights &amp; Choices</h2>
+
+    <p>You always have the final say over your information.</p>
+
+    <details>
+      <summary>📤 Export all your data</summary>
+      <div class="det-body">
+        <p>Navigate to <strong>Settings → Your Data → Export</strong>. You'll receive a ZIP file containing all your health entries, check-ins, and account data in open JSON format. No lock-in, no delays — export completes within seconds.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>🗑️ Delete your data</summary>
+      <div class="det-body">
+        <p><strong>Local data:</strong> Clear app data or uninstall the app — it's gone immediately.<br>
+        <strong>Cloud data:</strong> Settings → Your Data → Delete Account. This permanently erases all synced data from our servers within 30 days (typically within 48 hours). Deletion is irreversible.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>✏️ Correct or update information</summary>
+      <div class="det-body">
+        <p>You can edit any health entry, check-in, or habit at any time within the app. Account details (email, name) can be updated under Settings → Account. There is no limit on edits.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>🔒 Restrict processing</summary>
+      <div class="det-body">
+        <p>You can disable the adaptive engine (Settings → Adaptive Engine → Off), which stops all automated adjustments to your routine. Your data will still be stored but not processed for personalization. You can re-enable it at any time.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>🚫 Opt out of analytics</summary>
+      <div class="det-body">
+        <p>Settings → Privacy → Analytics. Toggle off to stop sending anonymized usage data. This does not affect core functionality. Crash reports can also be disabled separately.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>👤 Use Vitals without an account</summary>
+      <div class="det-body">
+        <p>Vitals works fully in local-only mode. No email, no cloud, no account needed. You'll miss cross-device sync and backup, but all core features — habits, check-ins, adaptive engine, insights — work entirely on-device. You can upgrade to a cloud account later without losing data.</p>
+      </div>
+    </details>
+
+    <div class="divider"></div>
+
+    <!-- Section 6 -->
+    <h2 id="retention"><span class="sec-num">6</span> Data Retention</h2>
+
+    <p>We keep your data only as long as it serves you.</p>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Data Type</th><th>Retention</th><th>Reason</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Health entries &amp; logs</td><td>Until you delete them</td><td>Your ongoing insights &amp; trends</td></tr>
+        <tr><td>Account info</td><td>Until account deletion</td><td>Authentication &amp; sync</td></tr>
+        <tr><td>Analytics (anonymized)</td><td>26 months, then aggregated</td><td>Product improvement</td></tr>
+        <tr><td>Crash reports</td><td>90 days</td><td>Debugging</td></tr>
+        <tr><td>Care-team shared links</td><td>72 hours or until revoked</td><td>Time-limited by design</td></tr>
+        <tr><td>Deleted account data</td><td>Removed within 30 days</td><td>Backup purge cycle</td></tr>
+      </tbody>
+    </table>
+
+    <div class="divider"></div>
+
+    <!-- Section 7 -->
+    <h2 id="children"><span class="sec-num">7</span> Children's Privacy</h2>
+
+    <p>Vitals is not intended for children under 13. We do not knowingly collect personal information from children. If we learn that a child under 13 has created an account, we will delete it and all associated data promptly.</p>
+
+    <p>For users aged 13–17, we recommend parental guidance. Condition management can involve sensitive health decisions, and we encourage families to discuss routine tracking together.</p>
+
+    <div class="divider"></div>
+
+    <!-- Section 8 -->
+    <h2 id="ccpa"><span class="sec-num">8</span> California Privacy Rights (CCPA)</h2>
+
+    <p>If you are a California resident, you have the right to:</p>
+    <ul>
+      <li><strong>Know</strong> — Request a complete list of data categories we've collected, the business purpose, and any third parties we've shared it with (past 12 months)</li>
+      <li><strong>Delete</strong> — Request deletion of your personal information</li>
+      <li><strong>Opt out of sale</strong> — We do not sell personal information, so there is nothing to opt out of. We include this right for completeness</li>
+      <li><strong>Non-discrimination</strong> — Exercising any privacy right will not result in different treatment or degraded service</li>
+    </ul>
+
+    <div class="info-card green">
+      <span class="ic">✅</span>
+      <span><b>No sale, no sharing for cross-context behavioral advertising.</b> In CCPA terms, we are a "no sale" business. The "Do Not Sell" link is not needed because there is nothing to opt out of.</span>
+    </div>
+
+    <p>To exercise any CCPA right, email <a href="mailto:privacy@vitals.app">privacy@vitals.app</a> or use the in-app Settings → Privacy → Data Request. We respond within 45 days (30 for verified requests).</p>
+
+    <div class="divider"></div>
+
+    <!-- Section 9 -->
+    <h2 id="gdpr"><span class="sec-num">9</span> GDPR for EU/EEA Users</h2>
+
+    <p>If you are in the European Union or European Economic Area, you have additional rights under the General Data Protection Regulation:</p>
+
+    <ul>
+      <li><strong>Right of access</strong> — Obtain confirmation and a copy of your personal data</li>
+      <li><strong>Right to rectification</strong> — Correct inaccurate or incomplete data</li>
+      <li><strong>Right to erasure</strong> — Request deletion ("right to be forgotten")</li>
+      <li><strong>Right to restriction</strong> — Limit how we process your data</li>
+      <li><strong>Right to data portability</strong> — Receive your data in a structured, machine-readable format</li>
+      <li><strong>Right to object</strong> — Object to processing based on legitimate interests</li>
+      <li><strong>Right to withdraw consent</strong> — Revoke any consent you previously gave, without affecting the lawfulness of prior processing</li>
+    </ul>
+
+    <h3>Legal Basis for Processing</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>Processing Activity</th><th>Legal Basis</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Providing the app service</td><td>Contract performance (Art. 6(1)(b))</td></tr>
+        <tr><td>Adaptive engine personalization</td><td>Contract performance + consent</td></tr>
+        <tr><td>Cloud backup &amp; sync</td><td>Consent (Art. 6(1)(a))</td></tr>
+        <tr><td>Anonymous analytics</td><td>Legitimate interest (Art. 6(1)(f))</td></tr>
+        <tr><td>Legal compliance</td><td>Legal obligation (Art. 6(1)(c))</td></tr>
+      </tbody>
+    </table>
+
+    <p>If you believe your GDPR rights have been violated, you have the right to lodge a complaint with your local supervisory authority.</p>
+
+    <div class="highlight-block purple">
+      <b>🇪🇺 Data residency</b>
+      <p>EU users' cloud data is stored exclusively in EU-based data centers. We do not transfer EU personal data outside the EEA unless you explicitly choose a non-EU region in settings.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Section 10 -->
+    <h2 id="changes"><span class="sec-num">10</span> Policy Changes</h2>
+
+    <p>We may update this policy from time to time. When we do:</p>
+    <ul>
+      <li>We'll update the <strong>"Last updated"</strong> date at the top of this page</li>
+      <li>For material changes, we'll notify you via an in-app banner and email (if we have your address)</li>
+      <li>You'll always have the opportunity to review changes before they take effect</li>
+      <li>Continued use after the effective date constitutes acceptance</li>
+    </ul>
+
+    <p>Previous versions are archived and available on request.</p>
+
+    <div class="info-card blue">
+      <span class="ic">📝</span>
+      <span><b>We won't quietly weaken your privacy.</b> If we ever change this policy in a way that reduces your protections, we will proactively notify you — not just update a date and hope you don't notice.</span>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Section 11 -->
+    <h2 id="contact"><span class="sec-num">11</span> Contact Us</h2>
+
+    <p>Questions, concerns, or data requests? We're real people and we respond.</p>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="cc-icon" style="background:var(--primary-soft)">📧</div>
+        <b>Email</b>
+        <span>privacy@vitals.app</span>
+      </div>
+      <div class="contact-card">
+        <div class="cc-icon" style="background:var(--adhd-soft)">💬</div>
+        <b>In-App</b>
+        <span>Settings → Privacy → Request</span>
+      </div>
+      <div class="contact-card">
+        <div class="cc-icon" style="background:var(--good-soft)">📍</div>
+        <b>Mail</b>
+        <span>Vitals Privacy<br>42 Wellness Lane<br>San Francisco, CA 94102</span>
+      </div>
+    </div>
+
+    <p>Data access, deletion, and correction requests are typically fulfilled within <strong>48 hours</strong>. Complex requests may take up to 30 days as permitted by law. You will never be charged for exercising your privacy rights.</p>
+
+    <div style="margin-top:40px;text-align:center">
+      <button class="print-btn" onclick="window.print()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        Print or save this policy
+      </button>
+    </div>
+
+  </main>
+</div>
+
+<!-- ====================== FOOTER ====================== -->
+<footer class="footer">
+  <div class="f-brand"><span class="dot"></span> Vitals</div>
+  <p>A condition-aware routine companion. Your data stays yours.<br>© 2025 Vitals Inc. All rights reserved.</p>
+</footer>
+
+<!-- ====================== TOAST ====================== -->
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============================================================
+   INTERACTIVE BEHAVIORS
+   ============================================================ */
+
+// ---- Scroll-based TOC highlighting ----
+const tocLinks = document.querySelectorAll('.toc a');
+const sections = [];
+
+tocLinks.forEach(link => {
+  const id = link.getAttribute('href').slice(1);
+  const el = document.getElementById(id);
+  if (el) sections.push({ id, el, link });
+});
+
+function updateActiveToc() {
+  let current = sections[0];
+  for (const sec of sections) {
+    const rect = sec.el.getBoundingClientRect();
+    if (rect.top <= 120) current = sec;
+  }
+  tocLinks.forEach(l => l.classList.remove('active'));
+  if (current) current.link.classList.add('active');
+}
+
+window.addEventListener('scroll', updateActiveToc, { passive: true });
+updateActiveToc();
+
+// ---- Scroll reveal ----
+const revealEls = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.12 });
+
+revealEls.forEach(el => revealObserver.observe(el));
+
+// ---- Smooth scroll for TOC links ----
+tocLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// ---- Copy email to clipboard ----
+document.querySelectorAll('.contact-card').forEach(card => {
+  const span = card.querySelector('span');
+  if (span && span.textContent.includes('@')) {
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', () => {
+      navigator.clipboard.writeText(span.textContent.trim()).then(() => {
+        showToast('📋 Email copied to clipboard');
+      }).catch(() => {
+        showToast('📧 ' + span.textContent.trim());
+      });
+    });
+  }
+});
+
+// ---- Toast notification ----
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.classList.add('show');
+  clearTimeout(toast._timer);
+  toast._timer = setTimeout(() => {
+    toast.classList.remove('show');
+  }, 2400);
+}
+
+// ---- Last updated highlight on scroll ----
+const heroSection = document.querySelector('.hero');
+let heroShown = false;
+if (heroSection) {
+  const heroObs = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting && !heroShown) {
+      heroSection.querySelectorAll('.meta-chip').forEach((chip, i) => {
+        chip.style.animation = `fadeUp .45s ease-out ${i * .1}s both`;
+      });
+      heroShown = true;
+    }
+  }, { threshold: 0.5 });
+  heroObs.observe(heroSection);
+}
+
+// ---- Responsive TOC: collapse on mobile ----
+const tocSidebar = document.getElementById('toc-sidebar');
+if (window.innerWidth <= 860) {
+  tocSidebar.style.maxHeight = '0';
+  tocSidebar.style.padding = '0';
+  tocSidebar.style.overflow = 'hidden';
+  tocSidebar.style.transition = 'all .3s ease';
+  tocSidebar.style.border = 'none';
+  tocSidebar.style.boxShadow = 'none';
+
+  const tocToggle = document.createElement('button');
+  tocToggle.className = 'print-btn';
+  tocToggle.style.cssText = 'margin:0 auto 24px;display:flex;width:100%;max-width:780px;justify-content:center;';
+  tocToggle.innerHTML = '📑 Show table of contents';
+  tocToggle.setAttribute('aria-expanded', 'false');
+
+  tocSidebar.parentNode.insertBefore(tocToggle, tocSidebar);
+
+  let tocOpen = false;
+  tocToggle.addEventListener('click', () => {
+    tocOpen = !tocOpen;
+    if (tocOpen) {
+      tocSidebar.style.maxHeight = '800px';
+      tocSidebar.style.padding = '20px 18px';
+      tocSidebar.style.border = '1px solid var(--line)';
+      tocSidebar.style.boxShadow = 'var(--shadow-soft)';
+      tocToggle.innerHTML = '📑 Hide table of contents';
+      tocToggle.setAttribute('aria-expanded', 'true');
+    } else {
+      tocSidebar.style.maxHeight = '0';
+      tocSidebar.style.padding = '0';
+      tocSidebar.style.border = 'none';
+      tocSidebar.style.boxShadow = 'none';
+      tocToggle.innerHTML = '📑 Show table of contents';
+      tocToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+</script>
+</body>
+</html>
