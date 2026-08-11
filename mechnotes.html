@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Mechanical Engineering Notes (btechbook)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563EB;
+            --primary-dark: #1E40AF;
+            --accent: #06B6D4;
+            --bg-slate: #F8FAFC;
+            --surface: #FFFFFF;
+            --text-dark: #0F172A;
+            --text-muted: #64748B;
+            --border: #E2E8F0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-slate);
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header-card {
+            background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 50%, #0284C7 100%);
+            color: #FFFFFF;
+            padding: 40px 32px;
+            border-radius: 24px;
+            box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.25);
+            margin-bottom: 30px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+
+        .header-card h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .header-card p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.95rem;
+        }
+
+        .content-card {
+            background: var(--surface);
+            padding: 36px 32px;
+            border-radius: 24px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--border);
+        }
+
+        .section {
+            margin-bottom: 28px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section ul li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .section ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        .info-box {
+            background: #EFF6FF;
+            border-left: 4px solid var(--primary);
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin: 16px 0;
+            font-size: 0.9rem;
+            color: #1E40AF;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 14px;
+            }
+            .header-card, .content-card {
+                padding: 24px 20px;
+                border-radius: 18px;
+            }
+            .header-card h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Banner -->
+        <div class="header-card">
+            <div class="badge">Google Play Verified Compliance</div>
+            <h1>Privacy Policy</h1>
+            <p>Mechanical Engineering Notes - BTech (com.btechbook.mechnote)</p>
+            <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.8;">Effective Date: August 12, 2026</p>
+        </div>
+
+        <!-- Content Card -->
+        <div class="content-card">
+            
+            <div class="section">
+                <h2>1. Introduction</h2>
+                <p>Welcome to <strong>Mechanical Engineering Notes - BTech</strong> ("we", "our", or "the app"). We respect your privacy and are committed to protecting user data. This Privacy Policy outlines how our Android mobile application handles information.</p>
+            </div>
+
+            <div class="info-box">
+                🔒 <strong>Zero Personal Data Collection:</strong> Mechanical Engineering Notes does NOT collect, transmit, store, or sell any personally identifiable user information.
+            </div>
+
+            <div class="section">
+                <h2>2. Information Collection & Data Storage</h2>
+                <p>Our application functions primarily offline to provide a seamless study environment for engineering students:</p>
+                <ul>
+                    <li><strong>No Personal Identifiers:</strong> We do not ask for or collect names, email addresses, phone numbers, or account credentials.</li>
+                    <li><strong>100% On-Device Local Data:</strong> All subject bookmarks, formula preferences, and calculation logs are saved strictly on your local device via Room Database.</li>
+                    <li><strong>No Analytics or Tracking:</strong> We do not integrate third-party tracking software or advertising SDKs that gather user device telemetry.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>3. Device Permissions & Purpose</h2>
+                <p>The app requests minimal Android system permissions strictly necessary for core educational features:</p>
+                <ul>
+                    <li><strong>INTERNET & ACCESS_NETWORK_STATE:</strong> Used solely to fetch syllabus PDF reference handbooks hosted on secure HTTPS servers.</li>
+                    <li><strong>Storage Access Framework (SAF):</strong> Used exclusively to let you browse and link local PDF study notes stored on your device.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>4. Data Safety & Security</h2>
+                <p>Because all data remains on your physical Android device, your study material and app preferences are secure. All network calls to fetch public engineering handbooks use encrypted HTTPS protocol.</p>
+            </div>
+
+            <div class="section">
+                <h2>5. Children's Privacy</h2>
+                <p>Our application is an academic study companion intended for university, college, and diploma engineering students (ages 13 and above). We do not knowingly collect any data from children.</p>
+            </div>
+
+            <div class="section">
+                <h2>6. Policy Updates & Contact</h2>
+                <p>We may update this Privacy Policy periodically to reflect app enhancements. Any changes will be posted on this page with an updated effective date.</p>
+                <p>If you have any questions or feedback regarding this policy, please contact our support team at:</p>
+                <p style="font-weight: 600; color: var(--primary);">📧 Email: asnstudios.app@gmail.com</p>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 btechbook. All rights reserved. • <a href="#">Mechanical Engineering Notes</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
