@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — NEET Counselling Predictor</title>
+  <meta name="description" content="Official Privacy Policy and Data Safety disclosures for NEET Counselling Predictor App & Web Platform." />
+  <meta name="theme-color" content="#070710" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* ── RESET & TOKENS ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-dark: #070710;
+      --bg-card: rgba(14, 18, 32, 0.75);
+      --bg-card-hover: rgba(18, 24, 42, 0.9);
+      --border: rgba(0, 229, 170, 0.16);
+      --border-hover: rgba(6, 182, 212, 0.4);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      
+      --teal: #00e5aa;
+      --cyan: #06b6d4;
+      --blue: #3b82f6;
+      --gold: #fbbf24;
+      --red: #f43f5e;
+      
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      --grad-brand: linear-gradient(135deg, #00e5aa, #06b6d4, #3b82f6);
+      --grad-gold: linear-gradient(135deg, #fde047, #fbbf24, #ea580c);
+      --grad-header: radial-gradient(circle at 50% 0%, rgba(0, 229, 170, 0.12) 0%, rgba(6, 182, 212, 0.05) 50%, transparent 80%);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.75;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Ambient Background Glow */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(circle at 15% 15%, rgba(0, 229, 170, 0.05) 0%, transparent 45%),
+        radial-gradient(circle at 85% 75%, rgba(6, 182, 212, 0.05) 0%, transparent 45%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Top Progress Bar */
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: var(--grad-brand);
+      box-shadow: 0 0 10px rgba(0, 229, 170, 0.7);
+      z-index: 1001;
+      transition: width 0.1s linear;
+    }
+
+    /* ── NAVBAR ── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 0.85rem 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(7, 7, 16, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #fff;
+    }
+    .brand-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: rgba(0, 229, 170, 0.1);
+      border: 1px solid rgba(0, 229, 170, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+    .brand-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+      background: var(--grad-brand);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .nav-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(0, 229, 170, 0.1);
+      border: 1px solid rgba(0, 229, 170, 0.25);
+      color: var(--teal);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── HEADER / HERO ── */
+    .hero {
+      position: relative;
+      z-index: 1;
+      padding: 4rem 1.5rem 2.5rem;
+      text-align: center;
+      background: var(--grad-header);
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(0, 229, 170, 0.08);
+      border: 1px solid rgba(0, 229, 170, 0.25);
+      color: var(--teal);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.2rem;
+    }
+    .hero-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .hero-title span {
+      background: var(--grad-brand);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-sub {
+      max-width: 680px;
+      margin: 0 auto 2rem;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    /* Meta bar */
+    .meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+    .meta-bar strong { color: var(--text-main); }
+    .meta-bar code {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--teal);
+      background: rgba(0, 229, 170, 0.08);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* ── LAYOUT ── */
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem 5rem;
+    }
+
+    /* ── QUICK SUMMARY BOX ── */
+    .summary-card {
+      background: linear-gradient(135deg, rgba(0, 229, 170, 0.08), rgba(6, 182, 212, 0.05));
+      border: 1px solid rgba(0, 229, 170, 0.25);
+      border-radius: 20px;
+      padding: 2rem;
+      margin-bottom: 2.5rem;
+      backdrop-filter: blur(12px);
+    }
+    .summary-card h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      color: var(--teal);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+    .summary-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    .summary-item i {
+      color: var(--teal);
+      margin-top: 4px;
+    }
+    .summary-item strong { color: var(--text-main); }
+
+    /* ── SECTION CARDS ── */
+    .section-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      backdrop-filter: blur(16px);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .section-card:hover {
+      border-color: var(--border);
+      background: var(--bg-card-hover);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .section-num {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--grad-brand);
+      color: #000;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+    }
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+    .section-body {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+    .section-body p { margin-bottom: 1rem; }
+    .section-body p:last-child { margin-bottom: 0; }
+
+    /* ── DATA TABLE ── */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      border-radius: 14px;
+      border: 1px solid var(--border-subtle);
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.88rem;
+    }
+    .data-table th {
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--teal);
+      font-weight: 700;
+      padding: 12px 18px;
+      font-family: 'JetBrains Mono', monospace;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .data-table td {
+      padding: 14px 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      color: var(--text-muted);
+    }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:hover td { background: rgba(255, 255, 255, 0.02); color: var(--text-main); }
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 0.74rem;
+      font-weight: 600;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .badge-teal { background: rgba(0, 229, 170, 0.12); color: var(--teal); }
+    .badge-cyan { background: rgba(6, 182, 212, 0.12); color: var(--cyan); }
+    .badge-gold { background: rgba(251, 191, 36, 0.12); color: var(--gold); }
+
+    /* ── CALLOUT BOXES ── */
+    .callout {
+      border-radius: 14px;
+      padding: 1.2rem 1.4rem;
+      margin: 1.2rem 0;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      font-size: 0.92rem;
+    }
+    .callout.info {
+      background: rgba(6, 182, 212, 0.08);
+      border: 1px solid rgba(6, 182, 212, 0.25);
+      color: #e0f2fe;
+    }
+    .callout.success {
+      background: rgba(0, 229, 170, 0.08);
+      border: 1px solid rgba(0, 229, 170, 0.25);
+      color: #e6fffa;
+    }
+    .callout.alert {
+      background: rgba(244, 63, 94, 0.08);
+      border: 1px solid rgba(244, 63, 94, 0.25);
+      color: #ffe4e6;
+    }
+    .callout i { font-size: 1.2rem; margin-top: 2px; }
+
+    /* ── LISTS ── */
+    .feature-list {
+      list-style: none;
+      margin: 1rem 0;
+    }
+    .feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 0.8rem;
+      font-size: 0.93rem;
+      color: var(--text-muted);
+    }
+    .feature-list li i {
+      color: var(--teal);
+      margin-top: 4px;
+      font-size: 0.85rem;
+    }
+
+    /* ── CONTACT CARD ── */
+    .contact-box {
+      background: linear-gradient(135deg, rgba(0, 229, 170, 0.12), rgba(6, 182, 212, 0.08));
+      border: 1px solid rgba(0, 229, 170, 0.3);
+      border-radius: 20px;
+      padding: 2.5rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .contact-box h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 800;
+      margin-bottom: 0.8rem;
+    }
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--grad-brand);
+      color: #000;
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 12px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+      margin-top: 1.2rem;
+      box-shadow: 0 4px 20px rgba(0, 229, 170, 0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .contact-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(0, 229, 170, 0.5);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 3rem 5%;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      background: rgba(5, 5, 12, 0.95);
+    }
+    footer a { color: var(--teal); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* Back to top */
+    #btn-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s;
+      z-index: 100;
+    }
+    #btn-top.show { opacity: 1; pointer-events: all; }
+    #btn-top:hover {
+      background: rgba(0, 229, 170, 0.15);
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+      .section-card { padding: 1.8rem 1.2rem; }
+      .meta-bar { flex-direction: column; gap: 8px; text-align: center; }
+      .hero { padding: 3rem 1rem 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Progress Bar -->
+  <div id="progress-bar"></div>
+
+  <!-- Navbar -->
+  <nav class="nav">
+    <a href="index.html" class="nav-brand">
+      <div class="brand-icon">🩺</div>
+      <span class="brand-title">NEET Counselling Predictor</span>
+    </a>
+    <span class="nav-pill">PLAY STORE &amp; WEB COMPLIANT</span>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-badge"><i class="fas fa-shield-alt"></i> Transparency &amp; Data Safety</div>
+    <h1 class="hero-title">Privacy <span>Policy</span></h1>
+    <p class="hero-sub">
+      We build tools to empower medical aspirants across India. We strictly respect your confidentiality and never commercialize your counselling records.
+    </p>
+
+    <div class="meta-bar">
+      <div>📅 <strong>Effective Date:</strong> August 17, 2026</div>
+      <div>🛡️ <strong>Application IDs:</strong> <code>com.aisht1110.neetcounsellingapp</code> &amp; <code>com.counsellor.predict</code></div>
+      <div>📧 <strong>Contact:</strong> <code>asnstudos.app@gmail.com</code></div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <!-- Quick Summary -->
+    <div class="summary-card">
+      <h3><i class="fas fa-bolt"></i> Key Privacy Guarantees</h3>
+      <div class="summary-grid">
+        <div class="summary-item">
+          <i class="fas fa-ban"></i>
+          <div><strong>Zero Data Selling:</strong> We never sell ranks, scores, or emails to private colleges, coaching centers, or brokers.</div>
+        </div>
+        <div class="summary-item">
+          <i class="fas fa-lock"></i>
+          <div><strong>End-to-End Encryption:</strong> All requests utilize HTTPS/TLS and Google Cloud Firebase enterprise security.</div>
+        </div>
+        <div class="summary-item">
+          <i class="fas fa-user-shield"></i>
+          <div><strong>Complete Control:</strong> Delete your profile, saved cutoffs, and history anytime in 1-click.</div>
+        </div>
+        <div class="summary-item">
+          <i class="fas fa-child"></i>
+          <div><strong>Safe &amp; Educational:</strong> 100% compliant with Google Play Families &amp; Content Rating guidelines.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 1: Overview -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-num">01</div>
+        <h2 class="section-title">Overview &amp; Purpose</h2>
+      </div>
+      <div class="section-body">
+        <p>
+          This Privacy Policy governs the mobile application (<strong>NEET College Predictor</strong> / <strong>NEET Counselling App</strong>) and related web platforms provided by our development team.
+        </p>
+        <p>
+          Our application assists students in analyzing previous years' NEET UG closing ranks (MCC &amp; State Quotas), comparing medical colleges, and formulating choice-filling preference lists.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 2: Data We Collect -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-num">02</div>
+        <h2 class="section-title">Data We Collect &amp; Google Play Data Safety</h2>
+      </div>
+      <div class="section-body">
+        <p>
+          In accordance with Google Play Console <strong>Data Safety</strong> requirements, here is the transparent breakdown of collected data types:
+        </p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Data Category</th>
+                <th>Specific Data Items</th>
+                <th>Purpose &amp; Storage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="badge badge-teal">Personal Info</span></td>
+                <td>Name, Email Address, Google UID</td>
+                <td>Firebase Authentication &amp; User Account synchronization</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-cyan">Counselling Inputs</span></td>
+                <td>All India Rank (AIR), NEET Score, Category, State</td>
+                <td>Executing cutoff prediction algorithms (stored locally or in user profile)</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-gold">Saved Preferences</span></td>
+                <td>Wishlist colleges, ordered choice-filling lists</td>
+                <td>Cloud Firestore sync across your Android devices</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-teal">Diagnostics &amp; Crash</span></td>
+                <td>Crash logs, OS version, device manufacturer</td>
+                <td>Firebase Crashlytics &amp; performance optimization</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-cyan">App Activity</span></td>
+                <td>Screen views, algorithm queries, feature interactions</td>
+                <td>Anonymous Firebase Analytics to improve user experience</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout success">
+          <i class="fas fa-check-circle"></i>
+          <div>
+            <strong>No Financial Data Collected:</strong> We do not collect credit card numbers, bank account details, or government ID numbers (Aadhaar / PAN).
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Third Party Providers -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-num">03</div>
+        <h2 class="section-title">Third-Party Service Providers</h2>
+      </div>
+      <div class="section-body">
+        <p>We leverage industry standard infrastructure from vetted enterprise providers:</p>
+        <ul class="feature-list">
+          <li>
+            <i class="fas fa-server"></i>
+            <div><strong>Google Firebase (Google LLC):</strong> Used for secure authentication (Email/Google Sign-In), Firestore database, and Cloud Storage. Governed by <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener" style="color:var(--teal);">Google Privacy Policy</a>.</div>
+          </li>
+          <li>
+            <i class="fas fa-chart-line"></i>
+            <div><strong>Firebase Analytics &amp; Crashlytics:</strong> Collects anonymized telemetry and stack traces to fix app crashes and speed up rank filtering.</div>
+          </li>
+          <li>
+            <i class="fas fa-mobile-alt"></i>
+            <div><strong>Expo Application Services (EAS):</strong> Build infrastructure used for generating Android application packages.</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 4: Security -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-num">04</div>
+        <h2 class="section-title">Data Protection &amp; Security Measures</h2>
+      </div>
+      <div class="section-body">
+        <p>We safeguard your educational data using state-of-the-art security measures:</p>
+        <ul class="feature-list">
+          <li><i class="fas fa-shield-halved"></i><strong>Encrypted Transit:</strong> 100% of network requests between your Android app and cloud databases use TLS 1.3 encryption.</li>
+          <li><i class="fas fa-key"></i><strong>Granular Access Rules:</strong> Firestore security rules restrict user profile and wishlist data access strictly to the authenticated owner.</li>
+          <li><i class="fas fa-database"></i><strong>Encryption at Rest:</strong> Cloud databases are encrypted at rest on Google Cloud platform servers.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 5: User Rights & Account Deletion -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-num">05</div>
+        <h2 class="section-title">User Rights &amp; 1-Click Account Deletion</h2>
+      </div>
+      <div class="section-body">
+        <p>
+          In accordance with Google Play's <strong>Account Deletion Policy</strong>, users have the full right to delete their accounts and all associated data:
+        </p>
+        <div class="callout alert">
+          <i class="fas fa-trash-alt"></i>
+          <div>
+            <strong>How to Delete Your Data:</strong>
+            <br />
+            1. Open the <strong>NEET College Predictor</strong> App or Website &rarr; Navigate to <strong>Profile / Account</strong>.
+            <br />
+            2. Scroll to the <strong>Danger Zone</strong> &rarr; Tap <strong>Delete Account</strong>.
+            <br />
+            3. Alternatively, email <strong>asnstudos.app@gmail.com</strong> with the subject <em>"Delete My Account"</em> from your registered email. All user records will be purged within 48 hours.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Children's Privacy -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-num">06</div>
+        <h2 class="section-title">Children's Privacy &amp; Age Policy</h2>
+      </div>
+      <div class="section-body">
+        <p>
+          Our application is intended for students aged 17 and above who are preparing for or have taken national medical entrance examinations (NEET UG).
+        </p>
+        <p>
+          We do not knowingly collect personal identifiable information from children under 13. If you believe an underage individual has submitted personal info, contact us at <strong>asnstudos.app@gmail.com</strong> for instant removal.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 7: Updates to Policy -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-num">07</div>
+        <h2 class="section-title">Changes to This Privacy Policy</h2>
+      </div>
+      <div class="section-body">
+        <p>
+          We may update our Privacy Policy periodically to reflect new features or regulatory requirements. Any modifications will be updated directly on this URL with a revised effective timestamp.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Box -->
+    <div class="contact-box">
+      <h3>Questions or Data Requests?</h3>
+      <p style="color:var(--text-muted); max-width: 500px; margin: 0 auto;">
+        Our developer desk is available to assist you with any privacy questions, data requests, or support.
+      </p>
+      <a href="mailto:asnstudos.app@gmail.com?subject=NEET%20App%20Privacy%20Inquiry" class="contact-btn">
+        <i class="fas fa-envelope"></i> Contact Developer Desk
+      </a>
+      <div style="margin-top:1.5rem; font-size:0.8rem; color:var(--text-dim); font-family:'JetBrains Mono',monospace;">
+        asnstudos.app@gmail.com · Response within 24-48 hours
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div style="margin-bottom: 1rem;">
+      <a href="index.html">Home</a> &nbsp;·&nbsp;
+      <a href="predict.html">Predictor</a> &nbsp;·&nbsp;
+      <a href="terms.html">Terms of Service</a> &nbsp;·&nbsp;
+      <a href="refund.html">Refund Policy</a> &nbsp;·&nbsp;
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      © 2026 NEET Counselling Predictor. All rights reserved.
+    </div>
+    <div style="margin-top: 6px; font-size: 0.78rem;">
+      Independent predictive counseling guidance tool · Not affiliated with MCC, NTA, or NMC.
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="btn-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script>
+    // Scroll progress & back to top
+    const progressBar = document.getElementById('progress-bar');
+    const btnTop = document.getElementById('btn-top');
+
+    window.addEventListener('scroll', () => {
+      const scrollTotal = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = scrollTotal > 0 ? (window.scrollY / scrollTotal) * 100 : 0;
+      progressBar.style.width = progress + '%';
+
+      if (window.scrollY > 400) {
+        btnTop.classList.add('show');
+      } else {
+        btnTop.classList.remove('show');
+      }
+    }, { passive: true });
+
+    btnTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
