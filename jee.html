@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy & Account Deletion | JEE Counsellor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #070710;
+      --card-bg: #0F1021;
+      --card-border: #1E2038;
+      --primary: #4F46E5;
+      --primary-light: #6366F1;
+      --primary-glow: rgba(99, 102, 241, 0.15);
+      --accent: #10B981;
+      --accent-glow: rgba(16, 185, 129, 0.12);
+      --danger: #EF4444;
+      --danger-glow: rgba(239, 68, 68, 0.12);
+      --warning: #F59E0B;
+      --text-main: #F1F5F9;
+      --text-muted: #94A3B8;
+      --text-dim: #64748B;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Ambient background gradient */
+    body::before {
+      content: "";
+      position: fixed;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, rgba(7, 7, 16, 0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    header {
+      border-bottom: 1px solid var(--card-border);
+      background: rgba(7, 7, 16, 0.85);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .brand-logo {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, #4F46E5, #06B6D4);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+    }
+
+    .brand-name {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-tag {
+      font-size: 0.75rem;
+      background: rgba(99, 102, 241, 0.15);
+      color: var(--primary-light);
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    .btn-delete-nav {
+      color: #F87171 !important;
+      background: var(--danger-glow);
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .btn-delete-nav:hover {
+      background: rgba(239, 68, 68, 0.2) !important;
+      color: #fff !important;
+    }
+
+    main {
+      flex: 1;
+      max-width: 1000px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-banner {
+      background: linear-gradient(180deg, var(--card-bg) 0%, rgba(15, 16, 33, 0.6) 100%);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-banner::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 100%;
+      background: radial-gradient(circle at top right, rgba(79, 70, 229, 0.15), transparent 70%);
+      pointer-events: none;
+    }
+
+    .app-meta-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 4px 10px;
+      border-radius: 6px;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #FFFFFF 30%, #94A3B8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .sub-title {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      max-width: 700px;
+    }
+
+    .notice-box {
+      margin-top: 1.25rem;
+      padding: 1rem 1.25rem;
+      border-radius: 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+    }
+
+    .notice-success {
+      background: var(--accent-glow);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #6EE7B7;
+    }
+
+    .notice-warning {
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      color: #FCD34D;
+    }
+
+    .notice-danger {
+      background: var(--danger-glow);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #FCA5A5;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+      .toc-sidebar {
+        display: none;
+      }
+    }
+
+    .toc-sidebar {
+      position: sticky;
+      top: 90px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.25rem;
+    }
+
+    .toc-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-dim);
+      margin-bottom: 0.75rem;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .toc-list a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: color 0.15s ease;
+      display: block;
+      padding: 4px 6px;
+      border-radius: 6px;
+    }
+
+    .toc-list a:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .toc-list a.danger-link {
+      color: #F87171;
+    }
+
+    .section-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 2rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .section-card.danger-card {
+      border-color: rgba(239, 68, 68, 0.4);
+      box-shadow: 0 0 25px rgba(239, 68, 68, 0.08);
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #fff;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 1.25rem 0 0.5rem;
+      color: #E2E8F0;
+    }
+
+    p {
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    ul, ol {
+      color: var(--text-muted);
+      margin-left: 1.25rem;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    strong {
+      color: var(--text-main);
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.25rem 0;
+      font-size: 0.9rem;
+    }
+
+    .data-table th, .data-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--card-border);
+      text-align: left;
+    }
+
+    .data-table th {
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .data-table td {
+      color: var(--text-muted);
+    }
+
+    /* Account Deletion Specific Box */
+    .steps-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 1.25rem 0;
+    }
+
+    .step-item {
+      display: flex;
+      gap: 1rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 1rem;
+      align-items: flex-start;
+    }
+
+    .step-number {
+      width: 28px;
+      height: 28px;
+      background: #EF4444;
+      color: #fff;
+      font-weight: 700;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .step-content h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.25rem;
+    }
+
+    .step-content p {
+      margin: 0;
+      font-size: 0.88rem;
+    }
+
+    .action-box {
+      background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(15, 16, 33, 0.8) 100%);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 10px 18px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-light);
+    }
+
+    .btn-danger {
+      background: #DC2626;
+      color: #fff;
+    }
+
+    .btn-danger:hover {
+      background: #EF4444;
+    }
+
+    footer {
+      border-top: 1px solid var(--card-border);
+      background: #05050C;
+      padding: 2.5rem 1.5rem;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#top" class="brand">
+        <div class="brand-logo">J</div>
+        <div>
+          <div class="brand-name">JEE Counsellor</div>
+        </div>
+      </a>
+      <span class="brand-tag">JoSAA &amp; CSAB 2026</span>
+
+      <ul class="nav-links">
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#data-collection">Data Safety</a></li>
+        <li><a href="#deletion" class="btn-delete-nav">Account Deletion</a></li>
+        <li><a href="#terms">Terms</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="top">
+    
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+      <div class="app-meta-badge">
+        <span>Application ID: <strong>in.app.counsellor</strong></span>
+        <span>•</span>
+        <span>Version: <strong>1.0.1</strong></span>
+        <span>•</span>
+        <span>Effective Date: <strong>August 2026</strong></span>
+      </div>
+      <h1>Privacy Policy &amp; User Data Safety</h1>
+      <p class="sub-title">
+        Official transparency document for the <strong>JEE Counsellor</strong> application. Explains how student data is processed, secured, and how you can permanently delete your account at any time.
+      </p>
+
+      <div class="notice-box notice-success">
+        <div>
+          <strong>🛡️ Strict Student Privacy Guarantee:</strong> We <u>never</u> sell, rent, or trade student ranks, phone numbers, email addresses, or college preferences to coaching institutions, private colleges, or commercial brokers.
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Grid with Sidebar -->
+    <div class="content-grid">
+      
+      <!-- Sticky Navigation Sidebar -->
+      <aside class="toc-sidebar">
+        <div class="toc-title">Table of Contents</div>
+        <ul class="toc-list">
+          <li><a href="#privacy">1. Privacy Overview</a></li>
+          <li><a href="#data-collection">2. Data We Collect</a></li>
+          <li><a href="#data-usage">3. How Data Is Used</a></li>
+          <li><a href="#third-party">4. Third-Party Services</a></li>
+          <li><a href="#deletion" class="danger-link">5. Account &amp; Data Deletion</a></li>
+          <li><a href="#retention">6. Data Retention</a></li>
+          <li><a href="#security">7. Security &amp; Encryption</a></li>
+          <li><a href="#children">8. Age &amp; Children's Privacy</a></li>
+          <li><a href="#terms">9. Terms &amp; Disclaimer</a></li>
+          <li><a href="#contact">10. Contact &amp; Grievance</a></li>
+        </ul>
+      </aside>
+
+      <!-- Main Body Sections -->
+      <div class="sections-wrapper">
+
+        <!-- 1. Privacy Overview -->
+        <section id="privacy" class="section-card">
+          <h2>1. Privacy Overview</h2>
+          <p>
+            This Privacy Policy applies to the <strong>JEE Counsellor</strong> mobile app (Package Name: <code>in.app.counsellor</code>) developed by <strong>ASN Studios / Aisht</strong> ("we", "us", "our").
+          </p>
+          <p>
+            We respect your privacy and are committed to complying with Google Play Developer Policies, India's Information Technology (IT) Rules, and international data protection standards.
+          </p>
+        </section>
+
+        <!-- 2. Data We Collect -->
+        <section id="data-collection" class="section-card">
+          <h2>2. Information We Collect</h2>
+          <p>We only collect data necessary to provide personalized college admission predictions and choice filling lists:</p>
+          
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Data Category</th>
+                <th>Data Elements</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Personal Account Info</strong></td>
+                <td>Name, Email Address, Profile Picture (optional via Google Sign-In), Firebase UID</td>
+                <td>User authentication, account management, sync across devices</td>
+              </tr>
+              <tr>
+                <td><strong>Candidate Metrics</strong></td>
+                <td>JEE Main CRL/AIR, JEE Advanced Rank, Category (General, OBC-NCL, SC, ST, EWS, PwD), Home State, Gender Quota</td>
+                <td>Running admission probability algorithms against historical JoSAA &amp; CSAB cutoff datasets</td>
+              </tr>
+              <tr>
+                <td><strong>User Choices &amp; Preferences</strong></td>
+                <td>Saved wishlists, choice filling priority orders, college comparisons</td>
+                <td>Cloud backup and custom choice export</td>
+              </tr>
+              <tr>
+                <td><strong>Technical / Diagnostic Data</strong></td>
+                <td>App crash logs, OS version, device model, IP address (ephemeral)</td>
+                <td>App stability, bug fixes, API performance monitoring</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- 3. How Data Is Used -->
+        <section id="data-usage" class="section-card">
+          <h2>3. How We Use Your Information</h2>
+          <ul>
+            <li>To match candidate ranks against official JoSAA 2024–2025 opening &amp; closing ranks (OR-CR).</li>
+            <li>To provide personalized "Safe", "Good", "Moderate", and "Tough" seat forecasts for IITs, NITs, IIITs, and GFTIs.</li>
+            <li>To construct and format customized choice filling sheets for JoSAA and CSAB counselling rounds.</li>
+            <li>To securely manage Pro/VIP pass upgrades via encrypted payment gateway integrations.</li>
+          </ul>
+        </section>
+
+        <!-- 4. Third-Party Services -->
+        <section id="third-party" class="section-card">
+          <h2>4. Third-Party Service Providers</h2>
+          <p>Our application interfaces with trusted third-party providers:</p>
+          <ul>
+            <li><strong>Google Play Services &amp; Firebase:</strong> Authentication, cloud database (Firestore), and app distribution. (<a href="https://policies.google.com/privacy" target="_blank" style="color: var(--primary-light);">Google Privacy Policy</a>)</li>
+            <li><strong>Cloudflare Workers:</strong> Secure edge API gateway and proxy. (<a href="https://www.cloudflare.com/privacypolicy/" target="_blank" style="color: var(--primary-light);">Cloudflare Privacy Policy</a>)</li>
+            <li><strong>Razorpay:</strong> Secure payment processing for optional pass upgrades. No card or banking numbers are stored on our servers. (<a href="https://razorpay.com/privacy/" target="_blank" style="color: var(--primary-light);">Razorpay Privacy Policy</a>)</li>
+          </ul>
+        </section>
+
+        <!-- 5. ACCOUNT & DATA DELETION (CRITICAL GOOGLE PLAY REQUIREMENT) -->
+        <section id="deletion" class="section-card danger-card">
+          <h2>🗑️ 5. Account &amp; User Data Deletion (Google Play Compliant)</h2>
+          <p>
+            In strict adherence to Google Play's <strong>Account Deletion Requirement</strong>, you have the absolute right to delete your account, authentication records, and all stored data at any time.
+          </p>
+
+          <div class="notice-box notice-danger">
+            <div>
+              <strong>⚠️ Permanent Action:</strong> Deleting your account will immediately wipe your saved college preferences, choice filling lists, ranks, and authentication profile. This action cannot be undone.
+            </div>
+          </div>
+
+          <h3>Method 1: Direct In-App Deletion (Instant)</h3>
+          <div class="steps-container">
+            <div class="step-item">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h4>Open JEE Counsellor App</h4>
+                <p>Launch the app and navigate to the <strong>Account</strong> tab in the bottom navigation bar.</p>
+              </div>
+            </div>
+
+            <div class="step-item">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h4>Locate Account Settings</h4>
+                <p>Scroll down to the <strong>Account Management / Danger Zone</strong> section.</p>
+              </div>
+            </div>
+
+            <div class="step-item">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h4>Tap "Delete Account" &amp; Confirm</h4>
+                <p>Press the red <strong>Delete Account</strong> button and confirm the prompt. Your user record, Firestore document, and cached sessions are purged instantly.</p>
+              </div>
+            </div>
+          </div>
+
+          <h3>Method 2: Web &amp; Email Deletion Request (Within 24–48 Hours)</h3>
+          <p>
+            If you have uninstalled the application or cannot access your device, you can request manual deletion by sending an email:
+          </p>
+
+          <div class="action-box">
+            <h4 style="color:#fff; margin-bottom: 0.5rem;">Send Deletion Request:</h4>
+            <p style="margin-bottom: 1rem; font-size: 0.9rem;">
+              Send an email to <strong style="color: #60A5FA;">asnstudos.app@gmail.com</strong> with the subject: <br>
+              <code>Account Deletion Request - JEE Counsellor</code>
+            </p>
+            <p style="margin-bottom: 1.25rem; font-size: 0.85rem; color: var(--text-muted);">
+              Please specify the email address associated with your registered account. All database records tied to that email will be wiped within 48 hours.
+            </p>
+            <a href="mailto:asnstudos.app@gmail.com?subject=Account%20Deletion%20Request%20-%20JEE%20Counsellor&body=Hello%2C%0A%0APlease%20permanently%20delete%20my%20JEE%20Counsellor%20account%20and%20all%20associated%20data.%0A%0ARegistered%20Email%3A%20%0AFirebase%20User%20ID%20(optional)%3A%20%0A%0AThank%20you." class="btn btn-danger">
+              ✉️ Email Deletion Request
+            </a>
+          </div>
+
+          <h3 style="margin-top: 1.5rem;">What Data Is Deleted?</h3>
+          <ul>
+            <li><strong>Firebase Auth Profile:</strong> Email, UID, display name, and login tokens.</li>
+            <li><strong>User Firestore Record:</strong> Saved rank, category, quota, and state filters.</li>
+            <li><strong>Wishlist &amp; Choice Lists:</strong> All custom priority orders and saved colleges.</li>
+          </ul>
+        </section>
+
+        <!-- 6. Data Retention -->
+        <section id="retention" class="section-card">
+          <h2>6. Data Retention Policy</h2>
+          <p>
+            We retain candidate academic metrics and account preferences only for as long as your account is active to maintain your saved lists across sessions.
+          </p>
+          <p>
+            Upon account deletion, all personal identifiers and user data are purged from our live database immediately. Anonymized statistical logs (such as aggregate query counts without user IDs) and statutory financial transaction records (for tax compliance) may be retained as required by law.
+          </p>
+        </section>
+
+        <!-- 7. Security & Encryption -->
+        <section id="security" class="section-card">
+          <h2>7. Security &amp; Encryption</h2>
+          <p>
+            All network communication between the JEE Counsellor mobile app and our servers/Firebase is encrypted in transit using industry-standard <strong>HTTPS / TLS 1.3</strong> protocols. We do not store plaintext passwords on our servers.
+          </p>
+        </section>
+
+        <!-- 8. Children's Privacy -->
+        <section id="children" class="section-card">
+          <h2>8. Age &amp; Children's Privacy</h2>
+          <p>
+            Our app is designed for high school graduates, engineering aspirants, and parents/guardians navigating the JoSAA and CSAB counselling process (Ages 13 and above). We do not knowingly collect personal information from children under 13.
+          </p>
+        </section>
+
+        <!-- 9. Terms of Service & Disclaimer -->
+        <section id="terms" class="section-card">
+          <h2>9. Terms of Service &amp; Statutory Disclaimer</h2>
+          
+          <div class="notice-box notice-warning">
+            <div>
+              <strong>⚠️ Non-Affiliation Disclaimer:</strong> JEE Counsellor is an independent counselling guidance and statistical estimation tool. It is <strong>NOT</strong> affiliated with, authorized by, or endorsed by the Joint Seat Allocation Authority (JoSAA), Central Seat Allocation Board (CSAB), National Testing Agency (NTA), or any Indian Institute of Technology (IIT) / National Institute of Technology (NIT).
+            </div>
+          </div>
+
+          <p>
+            All prediction calculations and chance estimates (Safe, Good, Moderate, Tough) are statistical forecasts generated from official public 2024 and 2025 opening &amp; closing ranks. Official counselling and seat allotment happens strictly on <code>josaa.nic.in</code> and <code>csab.nic.in</code>.
+          </p>
+        </section>
+
+        <!-- 10. Contact & Support -->
+        <section id="contact" class="section-card">
+          <h2>10. Contact &amp; Grievance Officer</h2>
+          <p>If you have any questions, privacy inquiries, or deletion requests, please contact our team:</p>
+          
+          <p>
+            <strong>Developer:</strong> ASN Studios / Aisht<br>
+            <strong>Support Email:</strong> <a href="mailto:asnstudos.app@gmail.com" style="color: var(--primary-light);">asnstudos.app@gmail.com</a><br>
+            <strong>App Package:</strong> <code>in.app.counsellor</code><br>
+            <strong>Response Time:</strong> Within 24 to 48 business hours
+          </p>
+        </section>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <ul class="footer-links">
+      <li><a href="#privacy">Privacy Policy</a></li>
+      <li><a href="#deletion">Account Deletion</a></li>
+      <li><a href="#terms">Terms of Service</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <p>&copy; 2026 JEE Counsellor (in.app.counsellor). All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
