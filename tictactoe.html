@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Tic Tac Toe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0F172A;
+      --card-bg: #1E293B;
+      --border: #334155;
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --accent-x: #38BDF8;      /* Sky Blue chalk */
+      --accent-o: #FB7185;      /* Coral chalk */
+      --accent-soft: rgba(56, 189, 248, 0.1);
+      --tag-bg: #0F172A;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text-main);
+      line-height: 1.65;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 840px;
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 36px 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent-x), var(--accent-o));
+    }
+
+    .badge {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      padding: 5px 12px;
+      border-radius: 6px;
+      margin-bottom: 14px;
+      color: var(--accent-x);
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 15px;
+      color: var(--text-muted);
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text-main);
+    }
+
+    .icon-bullet {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: var(--accent-soft);
+      color: var(--accent-x);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    p {
+      margin-bottom: 14px;
+      font-size: 15px;
+      color: #CBD5E1;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 16px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 15px;
+      color: #CBD5E1;
+    }
+
+    li strong {
+      color: var(--text-main);
+    }
+
+    a {
+      color: var(--accent-x);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: #7DD3FC;
+      text-decoration: underline;
+    }
+
+    .info-box {
+      background: var(--accent-soft);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: #BAE6FD;
+    }
+
+    .grid-types {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin: 16px 0;
+    }
+
+    .grid-card {
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+
+    .grid-card h4 {
+      font-size: 14px;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .grid-card p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px 0 40px;
+      color: var(--text-muted);
+      font-size: 13px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 14px;
+      }
+      header, .card {
+        padding: 24px 20px;
+      }
+      h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge">GOOGLE PLAY COMPLIANCE & PRIVACY</div>
+      <h1>Privacy Policy for Tic Tac Toe</h1>
+      <p class="subtitle">Effective Date: September 2026 &bull; Developed by ASN Studios</p>
+    </header>
+
+    <div class="card">
+      <h2><span class="icon-bullet">1</span> Overview & Core Commitment</h2>
+      <p>
+        ASN Studios ("we", "our", or "us") is dedicated to protecting your privacy. This Privacy Policy details how data is handled when you download, install, and play <strong>Tic Tac Toe</strong> (including Classic 3×3, 4×4, and Infinity modes).
+      </p>
+      <p>
+        <strong>We believe in zero unnecessary data collection.</strong> Our game is engineered offline-first. We do not require account registration, passwords, email addresses, phone numbers, or any Personally Identifiable Information (PII) to enjoy the complete game experience.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon-bullet">2</span> Information We Store Locally on Your Device</h2>
+      <p>
+        All gameplay data and personal settings are saved strictly on your local device (via secure local device storage / <code>SharedPreferences</code>). This data includes:
+      </p>
+      <div class="grid-types">
+        <div class="grid-card">
+          <h4>Match Records</h4>
+          <p>Wins, losses, draws, and win streaks across game modes.</p>
+        </div>
+        <div class="grid-card">
+          <h4>Puzzle Progress</h4>
+          <p>Solved puzzle levels, current difficulty tier, and stars earned.</p>
+        </div>
+        <div class="grid-card">
+          <h4>Custom Themes</h4>
+          <p>Active visual skin selection (Chalkboard, Paper, Dark, etc.).</p>
+        </div>
+        <div class="grid-card">
+          <h4>Audio & Haptics</h4>
+          <p>Sound effect volume, background music toggle, and vibration feedback.</p>
+        </div>
+      </div>
+      <div class="info-box">
+        <strong>Privacy Assurance:</strong> This data never leaves your smartphone or tablet. It is not synchronized with, uploaded to, or transmitted to any remote server owned by ASN Studios. You can wipe this local data anytime by clearing app storage in your device Settings.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon-bullet">3</span> Third-Party Services & Advertisements</h2>
+      <p>
+        To keep this game free for everyone, we display advertisements provided by <strong>Google AdMob</strong> (Google LLC).
+      </p>
+      <p>
+        Third-party ad networks may automatically receive technical information when delivering advertisements, which may include:
+      </p>
+      <ul>
+        <li><strong>Advertising Identifiers:</strong> Google Advertising ID (GAID / AAID).</li>
+        <li><strong>Device Diagnostics:</strong> Device model, operating system version, and general screen resolution.</li>
+        <li><strong>Coarse Location:</strong> Generalized location inferred from IP address (to deliver relevant localized ads).</li>
+        <li><strong>Ad Interaction Metrics:</strong> Impressions, clicks, and general ad viewability.</li>
+      </ul>
+      <p>Google’s handling of this data is governed by Google’s own privacy terms:</p>
+      <ul>
+        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+        <li><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">How Google Uses Information From Apps That Use Its Services</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon-bullet">4</span> Advertising ID & User Opt-Out Rights</h2>
+      <p>
+        You have complete control over personalized advertising on Android devices. You can reset or disable your advertising identifier at any time:
+      </p>
+      <ul>
+        <li>Go to your phone’s <strong>Settings</strong> &gt; <strong>Google</strong> &gt; <strong>Ads</strong>.</li>
+        <li>Tap <strong>Reset advertising ID</strong> or select <strong>Delete advertising ID</strong> to opt out of interest-based ads.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon-bullet">5</span> Children's Online Privacy (COPPA & GDPR-K)</h2>
+      <p>
+        Tic Tac Toe is a family-friendly game suitable for players of all ages. We do not knowingly collect, request, or store any personal data from children under the age of 13 (or under the digital age of consent in your jurisdiction).
+      </p>
+      <p>
+        If a parent or guardian discovers that any personal information was unintentionally collected, please contact us immediately, and we will promptly take steps to remove it.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon-bullet">6</span> Data Security</h2>
+      <p>
+        We prioritize the security of all data. Any network communication initiated by integrated Google SDKs (such as AdMob ad serving) is conducted using modern, industry-standard TLS/HTTPS encryption protocols in transit.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon-bullet">7</span> Policy Updates</h2>
+      <p>
+        We may update this Privacy Policy from time to time (for instance, to reflect regulatory updates or new app features). Any revisions will be published here with an updated effective date.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon-bullet">8</span> Developer Contact Information</h2>
+      <p>
+        If you have any questions, suggestions, or concerns regarding this Privacy Policy or your data rights, please contact our support team:
+      </p>
+      <p>
+        <strong>ASN Studios</strong><br>
+        Email: <a href="mailto:support@asnstudios.com">support@asnstudios.com</a><br>
+        Developer: ASN Studios Mobile Division
+      </p>
+    </div>
+
+    <footer>
+      &copy; 2026 ASN Studios &bull; Tic Tac Toe &bull; All Rights Reserved
+    </footer>
+  </div>
+</body>
+</html>
