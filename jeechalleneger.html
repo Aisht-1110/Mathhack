@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | JEE Challenger</title>
+  <meta name="description" content="Official Privacy Policy for the JEE Challenger mobile application. Learn how we respect your privacy and protect your study data.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" href="icon_512.png">
+  <style>
+    :root {
+      --primary: #2563EB;
+      --primary-dark: #1D4ED8;
+      --primary-light: #EFF6FF;
+      --accent: #10B981;
+      --accent-light: #ECFDF5;
+      --text-main: #0F172A;
+      --text-muted: #64748B;
+      --border-color: #E2E8F0;
+      --bg-page: #F8FAFC;
+      --bg-card: #FFFFFF;
+      --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      --card-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary: #3B82F6;
+        --primary-dark: #2563EB;
+        --primary-light: #1E293B;
+        --accent: #34D399;
+        --accent-light: #064E3B;
+        --text-main: #F8FAFC;
+        --text-muted: #94A3B8;
+        --border-color: #334155;
+        --bg-page: #0B0F19;
+        --bg-card: #151D2E;
+        --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+        --card-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1E1B4B 0%, #0F172A 100%);
+      color: #FFFFFF;
+      padding: 3.5rem 1.5rem 4rem;
+      text-align: center;
+      position: relative;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(8px);
+      padding: 0.45rem 1.1rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 1.25rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .brand-badge span.dot {
+      width: 8px;
+      height: 8px;
+      background-color: #34D399;
+      border-radius: 50%;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 0.75rem;
+    }
+
+    header p {
+      font-size: 1.05rem;
+      color: #94A3B8;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .meta-bar {
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      color: #CBD5E1;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: -2rem auto 3rem;
+      padding: 0 1.5rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Highlight Banner Cards */
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .highlight-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 1.25rem;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+    }
+
+    .highlight-card .icon-circle {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background-color: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .highlight-card h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+
+    .highlight-card p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Main Content Card */
+    .policy-content {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: var(--card-shadow-lg);
+    }
+
+    .toc {
+      background-color: var(--primary-light);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .toc h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-bottom: 0.75rem;
+    }
+
+    .toc ol {
+      padding-left: 1.25rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 0.4rem 1.5rem;
+    }
+
+    .toc a {
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+
+    .toc a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 2.25rem;
+      scroll-margin-top: 2rem;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-main);
+      border-left: 4px solid var(--primary);
+      padding-left: 0.75rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 0.85rem;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-bottom: 1rem;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 1.6rem;
+      margin-bottom: 0.55rem;
+      color: var(--text-muted);
+      font-size: 0.93rem;
+    }
+
+    ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .alert-box {
+      border-radius: 12px;
+      padding: 1.1rem 1.3rem;
+      margin: 1.25rem 0;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .alert-box.info {
+      background-color: var(--primary-light);
+      border: 1px solid var(--primary);
+      color: var(--text-main);
+    }
+
+    .alert-box.disclaimer {
+      background-color: var(--accent-light);
+      border: 1px solid var(--accent);
+      color: var(--text-main);
+    }
+
+    .alert-box strong {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: 0.92rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.25rem 0;
+      font-size: 0.88rem;
+    }
+
+    table th, table td {
+      border: 1px solid var(--border-color);
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    table th {
+      background-color: var(--primary-light);
+      color: var(--text-main);
+      font-weight: 700;
+    }
+
+    table td {
+      color: var(--text-muted);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-color);
+      background-color: var(--bg-card);
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      header {
+        padding: 2.5rem 1rem 3.5rem;
+      }
+      header h1 {
+        font-size: 1.9rem;
+      }
+      .policy-content {
+        padding: 1.5rem 1.2rem;
+      }
+      .toc ol {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Banner -->
+  <header>
+    <div class="brand-badge">
+      <span class="dot"></span>
+      <span>JEE Challenger Official</span>
+    </div>
+    <h1>Privacy Policy</h1>
+    <p>We believe in 100% transparent, student-first privacy. Your mock test results, bookmarks, and study history stay on your device.</p>
+    <div class="meta-bar">
+      <strong>Effective Date:</strong> September 14, 2026 &nbsp;•&nbsp; <strong>Application:</strong> JEE Challenger Mobile
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- Key Takeaway Cards -->
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <div class="icon-circle">0</div>
+        <div>
+          <h4>Zero Personal Data</h4>
+          <p>We do not ask for, collect, or store your name, email, phone number, or contacts.</p>
+        </div>
+      </div>
+      <div class="highlight-card">
+        <div class="icon-circle">💾</div>
+        <div>
+          <h4>100% Local Storage</h4>
+          <p>Mock exam attempts, question states, and syllabus tracking live strictly on your device.</p>
+        </div>
+      </div>
+      <div class="highlight-card">
+        <div class="icon-circle">🛡️</div>
+        <div>
+          <h4>No Ads or Trackers</h4>
+          <p>Zero third-party advertising SDKs, zero behavioral trackers, and no data sales.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Policy Card -->
+    <div class="policy-content">
+
+      <!-- Table of Contents -->
+      <nav class="toc">
+        <h3>Table of Contents</h3>
+        <ol>
+          <li><a href="#overview">1. Overview & Scope</a></li>
+          <li><a href="#data-not-collected">2. Information We Do NOT Collect</a></li>
+          <li><a href="#local-data">3. Local Device Data Storage</a></li>
+          <li><a href="#permissions">4. Network & Device Permissions</a></li>
+          <li><a href="#third-parties">5. Third-Party Services</a></li>
+          <li><a href="#security">6. Data Security & Encryption</a></li>
+          <li><a href="#deletion">7. Data Retention & Deletion</a></li>
+          <li><a href="#children">8. Children's Privacy (Under 13)</a></li>
+          <li><a href="#disclaimer">9. Official Examination Disclaimer</a></li>
+          <li><a href="#contact">10. Contact Us & Grievance Redressal</a></li>
+        </ol>
+      </nav>
+
+      <!-- Section 1 -->
+      <section id="overview">
+        <h2>1. Overview & Scope</h2>
+        <p>This Privacy Policy applies to the <strong>JEE Challenger</strong> mobile application (the "App") developed by <strong>ASN Studios</strong> ("we", "our", or "us").</p>
+        <p>JEE Challenger is an educational companion built to help students prepare for competitive engineering entrance examinations (such as JEE Main and JEE Advanced). We respect your personal privacy and are committed to ensuring our users study without surveillance or privacy intrusion.</p>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="data-not-collected">
+        <h2>2. Information We Do NOT Collect</h2>
+        <p>Unlike many educational platforms, JEE Challenger is designed as a standalone, privacy-preserving utility:</p>
+        <ul>
+          <li><strong>No Personal Identifiable Information (PII):</strong> We do NOT collect your name, phone number, email address, physical address, or school details.</li>
+          <li><strong>No Mandatory Account Creation:</strong> You can practice questions, take full 180-minute CBT exams, and view syllabus topics without registering an account.</li>
+          <li><strong>No Financial Data:</strong> We do not ask for or collect debit/credit cards, UPI IDs, or net banking credentials.</li>
+          <li><strong>No Location or Sensor Data:</strong> The App does not access GPS, precise/coarse location, camera, microphone, or biometric sensors.</li>
+        </ul>
+      </section>
+
+      <!-- Section 3 -->
+      <section id="local-data">
+        <h2>3. Local Device Data Storage</h2>
+        <p>To provide a seamless study experience, the App saves user progress locally on your smartphone via an embedded, high-performance database (Hive):</p>
+        <ul>
+          <li><strong>Mock Exam Records:</strong> Your selected options, time spent per subject, and final test scorecards.</li>
+          <li><strong>Question Statuses:</strong> Questions marked for review, answered questions, and unvisited statuses during CBT simulations.</li>
+          <li><strong>Bookmarks & Saved Items:</strong> Formulas, questions, or revision notes you have explicitly saved for offline review.</li>
+          <li><strong>Syllabus Progress:</strong> Checklist status (Completed, In Progress, Revision Needed) for JEE chapters.</li>
+          <li><strong>App Preferences:</strong> Dark mode / light mode appearance preferences.</li>
+        </ul>
+        <div class="alert-box info">
+          <strong>Important Note on Local Storage:</strong> This data remains strictly in your phone's sandbox storage. It is never uploaded, synced, or transmitted to any external server.
+        </div>
+      </section>
+
+      <!-- Section 4 -->
+      <section id="permissions">
+        <h2>4. Network & Device Permissions</h2>
+        <p>JEE Challenger requests only the bare minimum Android permissions necessary to deliver educational content:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Android Permission</th>
+              <th>Usage & Technical Justification</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>android.permission.INTERNET</code></td>
+              <td>Enables the App to load official shift question papers, high-resolution circuit/diagram image crops, and font assets over secure HTTPS.</td>
+            </tr>
+            <tr>
+              <td><code>android.permission.ACCESS_NETWORK_STATE</code></td>
+              <td>Enables the App to check whether your device is connected to Wi-Fi/Mobile Data so it can gracefully switch to offline cached papers.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>The App requests <strong>zero dangerous or runtime permissions</strong> (no camera, no microphone, no storage management, no location).</p>
+      </section>
+
+      <!-- Section 5 -->
+      <section id="third-parties">
+        <h2>5. Third-Party Services</h2>
+        <p>We do not integrate third-party tracking or advertising networks (e.g., Google AdMob, Facebook Audience Network, or analytics brokers). We utilize only essential infrastructure providers:</p>
+        <ul>
+          <li><strong>Google Fonts:</strong> Open-source typographical font files loaded securely to render mathematical KaTeX symbols and LaTeX formulas cleanly.</li>
+          <li><strong>Content Delivery Network (CDN):</strong> Secure HTTPS endpoints utilized solely to deliver static question paper bundles and diagrams.</li>
+        </ul>
+      </section>
+
+      <!-- Section 6 -->
+      <section id="security">
+        <h2>6. Data Security & Encryption</h2>
+        <p>We apply industry best practices to ensure all communications and local data are protected:</p>
+        <ul>
+          <li>All network communications between the App and content distribution endpoints are strictly transmitted over <strong>TLS 1.3 / HTTPS encryption</strong>.</li>
+          <li>Local database records are confined to Android's sandboxed private application directories, preventing access by other apps installed on your device.</li>
+          <li>The production release build is obfuscated and hardened using Google R8 / ProGuard to prevent unauthorized reverse engineering or code manipulation.</li>
+        </ul>
+      </section>
+
+      <!-- Section 7 -->
+      <section id="deletion">
+        <h2>7. Data Retention & User Deletion Rights</h2>
+        <p>Because your practice data is stored entirely on your local device, you possess total control over your information:</p>
+        <ul>
+          <li><strong>Resetting Specific Records:</strong> You can clear individual test scores or reset syllabus checkmarks directly inside the App.</li>
+          <li><strong>Complete Data Erasure:</strong> Go to <code>Settings &gt; Apps &gt; JEE Challenger &gt; Storage &gt; Clear Storage / Clear Data</code> on your Android phone. This instantly permanently erases all local mock tests, scores, and bookmarks.</li>
+          <li><strong>Uninstalling:</strong> Uninstalling the App completely removes all local app databases and cached assets from your device.</li>
+        </ul>
+      </section>
+
+      <!-- Section 8 -->
+      <section id="children">
+        <h2>8. Children's Privacy (Age 13+)</h2>
+        <p>JEE Challenger is designed for secondary school and higher secondary students preparing for competitive entrance examinations (typically aged 13 and above). We do not knowingly solicit or collect personal information from children under the age of 13 in accordance with the Children's Online Privacy Protection Act (COPPA) and international child safety standards.</p>
+      </section>
+
+      <!-- Section 9 -->
+      <section id="disclaimer">
+        <h2>9. Official Examination & Government Disclaimer</h2>
+        <div class="alert-box disclaimer">
+          <strong>Mandatory Regulatory Notice:</strong>
+          <p style="margin-top: 0.35rem; color: inherit; font-size: 0.88rem;">
+            JEE Challenger is an independent educational preparatory utility developed by ASN Studios. <strong>JEE Challenger is NOT affiliated with, sponsored by, authorized by, or in any way officially connected with the National Testing Agency (NTA), the Joint Entrance Examination (JEE) Apex Board, the Indian Institutes of Technology (IITs), or the Ministry of Education, Government of India.</strong>
+          </p>
+          <p style="margin-top: 0.45rem; color: inherit; font-size: 0.88rem;">
+            All previous years' question papers, official syllabus items, and trademarks are referenced solely for academic assistance and fair educational preparation. For all official registrations, notices, and test bulletins, visit the official NTA portal at: <a href="https://jeemain.nta.nic.in" target="_blank" rel="noopener noreferrer" style="color: var(--primary); font-weight: bold;">https://jeemain.nta.nic.in</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 10 -->
+      <section id="contact">
+        <h2>10. Contact Us & Grievance Redressal</h2>
+        <p>If you have any questions, clarifications, or feedback regarding this Privacy Policy or the security of the App, please reach out to us:</p>
+        <ul>
+          <li><strong>Developer / Organization:</strong> ASN Studios</li>
+          <li><strong>Application:</strong> JEE Challenger - PYQs & Mocks</li>
+          <li><strong>Package Name:</strong> <code>com.jeechallenger.app</code></li>
+          <li><strong>Email Support:</strong> <a href="mailto:support@jeechallenger.com" style="color: var(--primary); font-weight: 600;">support@jeechallenger.com</a></li>
+          <li><strong>Website:</strong> <a href="https://jeechallenger.com" target="_blank" rel="noopener noreferrer" style="color: var(--primary); font-weight: 600;">https://jeechallenger.com</a></li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 JEE Challenger • Developed by ASN Studios. All rights reserved.</p>
+    <p style="margin-top: 0.4rem; font-size: 0.8rem;">
+      Compliant with Google Play Developer Policy Center & Global Privacy Guidelines.
+    </p>
+  </footer>
+
+</body>
+</html>
