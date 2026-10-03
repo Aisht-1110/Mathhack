@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Word Wonder | ASN Studios</title>
+  <meta name="description" content="Privacy Policy for Word Wonder by ASN Studios. Designed for children, families, and early learners with zero data collection and 100% offline safety.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4F46E5;
+      --primary-dark: #3730A3;
+      --primary-light: #EEF2FF;
+      --accent: #F59E0B;
+      --accent-light: #FEF3C7;
+      --success: #10B981;
+      --success-light: #D1FAE5;
+      --ink-dark: #0F172A;
+      --ink: #1E293B;
+      --ink-muted: #64748B;
+      --ink-subtle: #94A3B8;
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --border: #E2E8F0;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
+      --shadow-md: 0 6px 18px -4px rgba(15, 23, 42, 0.07), 0 2px 6px -2px rgba(15, 23, 42, 0.04);
+      --shadow-lg: 0 16px 32px -8px rgba(15, 23, 42, 0.09), 0 4px 12px -2px rgba(15, 23, 42, 0.04);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Top Navigation */
+    .header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(8px);
+      background-color: rgba(255, 255, 255, 0.95);
+    }
+
+    .header-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--ink-dark);
+    }
+
+    .brand-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #6366F1, #4F46E5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-family: 'Fredoka', cursive;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--ink-dark);
+      line-height: 1.2;
+    }
+
+    .brand-subtitle {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--primary);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--success-light);
+      color: #065F46;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .header-badge svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(180deg, #FFFFFF 0%, #F1F5F9 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+
+    .hero-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .badge-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hero h1 {
+      font-family: 'Fredoka', cursive;
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--ink-dark);
+      letter-spacing: -0.5px;
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+
+    .hero-desc {
+      font-size: 18px;
+      color: var(--ink-muted);
+      max-width: 640px;
+      margin: 0 auto 24px;
+    }
+
+    .meta-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 14px;
+      color: var(--ink-muted);
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .meta-item strong {
+      color: var(--ink);
+    }
+
+    /* Main Container */
+    .main-wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* Key Pillars Grid */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    .pillar-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .pillar-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+
+    .icon-emerald { background: var(--success-light); }
+    .icon-indigo { background: var(--primary-light); }
+    .icon-amber { background: var(--accent-light); }
+    .icon-violet { background: #EDE9FE; }
+
+    .pillar-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--ink-dark);
+    }
+
+    .pillar-card p {
+      font-size: 13.5px;
+      color: var(--ink-muted);
+      line-height: 1.5;
+    }
+
+    /* Content Layout */
+    .policy-content {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .section {
+      margin-bottom: 44px;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .section-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .section h2 {
+      font-family: 'Fredoka', cursive;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--ink-dark);
+    }
+
+    .section p {
+      font-size: 15.5px;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+
+    .section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .section ul {
+      margin: 14px 0 16px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .section li {
+      font-size: 15px;
+      color: var(--ink);
+    }
+
+    .section li strong {
+      color: var(--ink-dark);
+    }
+
+    /* Callout Boxes */
+    .callout {
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      margin: 20px 0;
+      border-left: 4px solid;
+    }
+
+    .callout-success {
+      background: #F0FDF4;
+      border-color: #10B981;
+    }
+
+    .callout-info {
+      background: #EFF6FF;
+      border-color: #3B82F6;
+    }
+
+    .callout-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .callout-success .callout-title { color: #065F46; }
+    .callout-info .callout-title { color: #1E40AF; }
+
+    .callout p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    .callout-success p { color: #166534; }
+    .callout-info p { color: #1E3A8A; }
+
+    /* Contact Card */
+    .contact-card {
+      background: linear-gradient(135deg, #1E1B4B 0%, #312E81 100%);
+      color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      margin-top: 48px;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .contact-card h2 {
+      font-family: 'Fredoka', cursive;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .contact-card p {
+      font-size: 16px;
+      color: #C7D2FE;
+      max-width: 600px;
+      margin: 0 auto 24px;
+    }
+
+    .contact-email-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #FFFFFF;
+      color: #312E81;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .contact-email-btn:hover {
+      transform: translateY(-2px);
+      background: #F8FAFC;
+    }
+
+    .contact-email-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--ink-muted);
+    }
+
+    .footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 40px 20px 32px;
+      }
+      .hero h1 {
+        font-size: 30px;
+      }
+      .hero-desc {
+        font-size: 16px;
+      }
+      .policy-content {
+        padding: 24px 20px;
+      }
+      .contact-card {
+        padding: 28px 20px;
+      }
+    }
+
+    @media print {
+      .header, .contact-card, .footer {
+        display: none;
+      }
+      body {
+        background: #FFFFFF;
+        color: #000000;
+      }
+      .policy-content {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="#" class="brand">
+        <div class="brand-icon">🦉</div>
+        <div class="brand-text">
+          <span class="brand-title">Word Wonder</span>
+          <span class="brand-subtitle">by ASN Studios</span>
+        </div>
+      </a>
+      <div class="header-badge">
+        <svg viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        COPPA &amp; Families Certified
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="badge-tag">Family Safety &amp; Trust</div>
+      <h1>Privacy Policy for Word Wonder</h1>
+      <p class="hero-desc">
+        We believe children’s learning apps should be joyous, enriching, and 100% private. Here is our straightforward promise to parents and guardians.
+      </p>
+      <div class="meta-bar">
+        <div class="meta-item">
+          <span>Developer:</span>
+          <strong>ASN Studios</strong>
+        </div>
+        <div class="meta-item">
+          <span>Application:</span>
+          <strong>Word Wonder</strong>
+        </div>
+        <div class="meta-item">
+          <span>Package ID:</span>
+          <strong>com.wordwonder.game.word_wonder</strong>
+        </div>
+        <div class="meta-item">
+          <span>Effective Date:</span>
+          <strong>October 2026</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main-wrapper">
+
+    <!-- Pillars -->
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <div class="pillar-icon icon-emerald">🛡️</div>
+        <h3>Zero Data Collection</h3>
+        <p>We do not collect, transmit, store, or sell any personal data. None. Ever.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon icon-indigo">✈️</div>
+        <h3>100% Offline App</h3>
+        <p>No internet connection needed. All games, audio, and tracing work locally on your device.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon icon-amber">🚫</div>
+        <h3>Zero Ads &amp; Trackers</h3>
+        <p>No banner ads, popups, video ads, or third-party behavioral analytics SDKs.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon icon-violet">👨‍👩‍👧</div>
+        <h3>Parent-Controlled</h3>
+        <p>Protected Parent Zone with math lock, screen time limits, and progress controls.</p>
+      </div>
+    </div>
+
+    <!-- Legal Policy Content -->
+    <article class="policy-content">
+
+      <!-- Section 1 -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-num">1</div>
+          <h2>Our Commitment to Children's Privacy</h2>
+        </div>
+        <p>
+          At <strong>ASN Studios</strong> ("we", "our", or "us"), protecting the privacy of young learners and families is our top priority. <strong>Word Wonder</strong> is an educational application created for children of all ages, including early learners under the age of 13.
+        </p>
+        <p>
+          We strictly follow the <strong>Children's Online Privacy Protection Act (COPPA)</strong>, the <strong>General Data Protection Regulation for Kids (GDPR-K)</strong>, and the <strong>Google Play Families Policy</strong>. We do not require children to share any personal information to use any feature of this app.
+        </p>
+
+        <div class="callout callout-success">
+          <div class="callout-title">
+            <span>🌟</span> The ASN Studios Kid-Safe Promise
+          </div>
+          <p>
+            Word Wonder never asks for names, email addresses, phone numbers, photos, GPS locations, audio recordings, or payment card details from your child.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-num">2</div>
+          <h2>Information We Do NOT Collect</h2>
+        </div>
+        <p>
+          To maintain an uncompromising standard of privacy, <strong>Word Wonder collects zero personal data</strong>:
+        </p>
+        <ul>
+          <li><strong>No Personal Identifiable Information (PII):</strong> No real names, addresses, birthdays, or emails.</li>
+          <li><strong>No Precise or Approximate Location:</strong> We never request GPS or network location.</li>
+          <li><strong>No Camera or Microphone Access:</strong> Tracing is done with fingers; speech is generated locally using on-device Text-to-Speech (TTS).</li>
+          <li><strong>No Device Identifiers or Fingerprinting:</strong> No Advertising IDs (AAID), IMEI, MAC address, or serial numbers are accessed or stored.</li>
+          <li><strong>No Third-Party Analytics:</strong> No third-party behavioral trackers (such as Google Analytics for Firebase, Facebook SDK, or Adjust) are present in the app.</li>
+          <li><strong>No External Advertisements:</strong> There are no commercial advertisements, sponsored content, or in-game tracking.</li>
+        </ul>
+      </section>
+
+      <!-- Section 3 -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-num">3</div>
+          <h2>Local Device Storage Only</h2>
+        </div>
+        <p>
+          To save game state between play sessions, Word Wonder stores minimal gameplay settings <strong>locally on the player's physical device</strong> using standard Android local storage (SharedPreferences):
+        </p>
+        <ul>
+          <li><strong>Player Nickname:</strong> An optional nickname or avatar chosen inside the app (e.g., "Superstar") to personalize greetings.</li>
+          <li><strong>Educational Progress:</strong> Stars earned, completed crossword words, mastered alphabet letters, and daily streak counts.</li>
+          <li><strong>Sticker Collection:</strong> Digital stickers unlocked and placed on the in-app sticker album canvas.</li>
+          <li><strong>Parental Preferences:</strong> Sound toggle, daily reminder alert time, screen time limiter duration, and Ollie voice accent preference (US, UK, Australia, India).</li>
+        </ul>
+
+        <div class="callout callout-info">
+          <div class="callout-title">
+            <span>🔒</span> Device-Bound Storage
+          </div>
+          <p>
+            All game data remains exclusively inside the app's private sandbox on your phone or tablet. It is <strong>never uploaded to external servers, cloud databases, or shared with third parties</strong>. Clearing app storage or uninstalling the app deletes all local data immediately.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 4 -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-num">4</div>
+          <h2>Permissions Requested</h2>
+        </div>
+        <p>
+          Word Wonder requires <strong>zero dangerous Android permissions</strong>.
+        </p>
+        <ul>
+          <li><strong>No Internet Permission:</strong> The app operates 100% offline.</li>
+          <li><strong>No Storage Permission:</strong> The app does not read your photos, documents, or external files.</li>
+          <li><strong>No Contact or Phone Permissions:</strong> The app has zero access to address books or phone states.</li>
+        </ul>
+      </section>
+
+      <!-- Section 5 -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-num">5</div>
+          <h2>Parent Zone &amp; Parental Controls</h2>
+        </div>
+        <p>
+          We empower parents and educators with full control over the learning experience:
+        </p>
+        <ul>
+          <li><strong>Parental Gate:</strong> Settings, certificates, and screen limits are protected behind an adult multiplication gate to prevent unintended child access.</li>
+          <li><strong>Screen Time Limiter:</strong> Parents can set a play timer (e.g., 15, 30, or 45 minutes) that gently reminds the child to take a healthy rest break.</li>
+          <li><strong>Voice Accent Selector:</strong> Parents can configure Ollie the Owl’s speech synthesis to their preferred English dialect (US, UK, Australia, India).</li>
+          <li><strong>Reset &amp; Delete:</strong> Parents can reset all game progress or delete local settings at any time directly through the Parent Zone or through Android system settings.</li>
+        </ul>
+      </section>
+
+      <!-- Section 6 -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-num">6</div>
+          <h2>Compliance with Global Privacy Standards</h2>
+        </div>
+        <p>
+          Word Wonder complies with all applicable privacy regulations worldwide:
+        </p>
+        <ul>
+          <li><strong>Children's Online Privacy Protection Act (COPPA):</strong> We do not collect personal information from children under 13 years of age.</li>
+          <li><strong>General Data Protection Regulation (GDPR / GDPR-K):</strong> Because we process no personal data, no data subject profiling or cross-border data transfer occurs.</li>
+          <li><strong>Google Play Families Policy:</strong> Our app meets all criteria under the Google Play Designed for Families and Teacher Approved programs.</li>
+        </ul>
+      </section>
+
+      <!-- Section 7 -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-num">7</div>
+          <h2>Changes to This Privacy Policy</h2>
+        </div>
+        <p>
+          We may update our Privacy Policy periodically to reflect new features or legal requirements. Any modifications will be posted to this page with an updated "Effective Date". We encourage parents to review this page periodically. Continued use of the application indicates acceptance of any updated policy terms.
+        </p>
+      </section>
+
+    </article>
+
+    <!-- Contact Card -->
+    <section class="contact-card">
+      <h2>Questions or Feedback?</h2>
+      <p>
+        If you have any questions, concerns, or requests regarding this Privacy Policy or our child-safety practices, our dedicated team at ASN Studios is here to help.
+      </p>
+      <a href="mailto:asnstudios.app@gmail.com" class="contact-email-btn">
+        <svg viewBox="0 0 20 20">
+          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+        </svg>
+        Contact: asnstudios.app@gmail.com
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>
+      &copy; 2026 <strong>ASN Studios</strong>. All rights reserved. | <strong>Word Wonder</strong> (com.wordwonder.game.word_wonder)
+    </p>
+    <p style="margin-top: 6px; font-size: 13px;">
+      Built with love for curious young learners and families worldwide.
+    </p>
+  </footer>
+
+</body>
+</html>
