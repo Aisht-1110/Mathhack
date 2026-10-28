@@ -1,70 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - AttendWise</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        h1 {
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-        }
-        h2 {
-            margin-top: 30px;
-        }
-        p {
-            margin-bottom: 15px;
-        }
-        ul {
-            margin-bottom: 20px;
-        }
-        .footer {
-            margin-top: 50px;
-            font-size: 0.9em;
-            text-align: center;
-            color: #7f8c8d;
-            border-top: 1px solid #eee;
-            padding-top: 20px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#2563EB">
+<title>Privacy Policy · AttendWise</title>
+<style>
+  :root{
+    --brand:#2563EB; --brand-2:#06B6D4; --ink:#0B1526; --muted:#64748B;
+    --bg:#F7F9FC; --card:#FFFFFF; --line:#E3E9F2; --soft:#EFF6FF;
+    --ok:#059669; --ok-soft:#ECFDF5; --warn:#B45309; --warn-soft:#FFFBEB;
+    --radius:20px; --shadow:0 18px 40px -24px rgba(11,21,38,.35);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --ink:#F1F5F9; --muted:#94A3B8; --bg:#0B1526; --card:#16233A;
+      --line:#26374F; --soft:#16233A; --ok:#34D399; --ok-soft:#0E2A24;
+      --warn:#FCD34D; --warn-soft:#2A2410; --shadow:0 18px 40px -24px rgba(0,0,0,.8);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:860px; margin:0 auto; padding:28px 22px 56px}
+
+  header.hero{
+    position:relative; overflow:hidden; border-radius:28px; color:#fff;
+    background:linear-gradient(135deg,#2563EB 0%,#0EA5E9 55%,#06B6D4 100%);
+    padding:34px 30px; box-shadow:var(--shadow);
+  }
+  header.hero::after{
+    content:""; position:absolute; width:280px; height:280px; right:-80px; top:-120px;
+    border-radius:50%; background:rgba(255,255,255,.14);
+  }
+  header.hero::before{
+    content:""; position:absolute; width:180px; height:180px; left:-70px; bottom:-90px;
+    border-radius:50%; background:rgba(255,255,255,.10);
+  }
+  .brand{display:flex; align-items:center; gap:14px; position:relative; z-index:1}
+  .logo{
+    width:52px;height:52px;border-radius:16px;background:rgba(255,255,255,.18);
+    display:grid;place-items:center;backdrop-filter:blur(6px);
+    border:1px solid rgba(255,255,255,.35);
+  }
+  .logo svg{width:26px;height:26px;fill:#fff}
+  .brand small{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;opacity:.8}
+  .brand strong{font-size:19px;letter-spacing:-.01em}
+  h1{position:relative;z-index:1;margin:26px 0 10px;font-size:clamp(28px,5vw,38px);line-height:1.15;letter-spacing:-.02em}
+  .hero p{position:relative;z-index:1;margin:0;max-width:60ch;color:rgba(255,255,255,.92);font-size:14.5px}
+  .chips{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+  .chip{
+    font-size:11.5px;font-weight:700;letter-spacing:.02em;padding:7px 12px;border-radius:999px;
+    background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);
+  }
+
+  .summary{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));margin:22px 0 8px}
+  .sum{
+    background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;
+    box-shadow:var(--shadow);
+  }
+  .sum .ic{
+    width:34px;height:34px;border-radius:11px;display:grid;place-items:center;margin-bottom:10px;
+    background:var(--soft);
+  }
+  .sum .ic svg{width:18px;height:18px;stroke:var(--brand);fill:none;stroke-width:2}
+  .sum b{display:block;font-size:13.5px;margin-bottom:3px}
+  .sum span{font-size:12.5px;color:var(--muted)}
+
+  section{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px 26px;margin-top:14px;box-shadow:var(--shadow);
+  }
+  h2{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:17px;letter-spacing:-.01em}
+  .num{
+    flex:none;width:28px;height:28px;border-radius:9px;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;
+    font-size:12.5px;font-weight:800;
+  }
+  p{margin:0 0 12px;color:var(--muted);font-size:14px}
+  p:last-child{margin-bottom:0}
+  ul{margin:0 0 12px;padding-left:20px;color:var(--muted);font-size:14px}
+  li{margin:6px 0}
+  strong{color:var(--ink)}
+  a{color:var(--brand);text-decoration:none;font-weight:600}
+  a:hover{text-decoration:underline}
+
+  .note{border-radius:14px;padding:14px 16px;font-size:13px;margin:14px 0 0;border:1px solid transparent}
+  .note.good{background:var(--ok-soft);border-color:color-mix(in srgb,var(--ok) 30%,transparent);color:var(--ink)}
+  .note.warn{background:var(--warn-soft);border-color:color-mix(in srgb,var(--warn) 30%,transparent);color:var(--ink)}
+  .note b{display:block;margin-bottom:2px;font-size:13px}
+
+  .contact{
+    display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;
+    background:linear-gradient(135deg,rgba(37,99,235,.10),rgba(6,182,212,.10));
+    border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;margin-top:14px;
+  }
+  .contact div b{display:block;font-size:14px}
+  .contact div span{font-size:12.5px;color:var(--muted)}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:13px;
+    background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;
+    font-size:13px;font-weight:700;box-shadow:0 12px 26px -14px rgba(37,99,235,.9);
+  }
+  .btn:hover{text-decoration:none;filter:brightness(1.05)}
+
+  footer{margin-top:30px;text-align:center;color:var(--muted);font-size:12px}
+  footer nav{display:flex;justify-content:center;gap:16px;margin-bottom:10px;flex-wrap:wrap}
+  footer nav a{font-size:12px}
+  @media (max-width:520px){
+    .wrap{padding:18px 14px 40px}
+    header.hero{padding:26px 22px;border-radius:22px}
+    section{padding:20px 18px}
+  }
+</style>
 </head>
 <body>
-    <h1>Privacy Policy for AttendWise</h1>
-    <p><strong>Effective Date:</strong> July 28, 2026</p>
-    <p>This Privacy Policy describes how AttendWise ("we", "our", or "us") collects, uses, and protects your information when you use our mobile application (the "Service").</p>
-    <h2>1. Information Collection and Use</h2>
-    <p>For a better experience while using our Service, we may require you to provide us with certain personally identifiable information, including but not limited to:</p>
-    <ul>
-        <li><strong>Personal Information:</strong> Name, email address, and role (e.g., student, teacher).</li>
-        <li><strong>Attendance Data:</strong> Records of attendance, timestamps, and related academic or organizational information.</li>
-        <li><strong>Device Information:</strong> Device ID, operating system, and app usage data to help us improve the service.</li>
-    </ul>
-    <p>The information that we request will be retained by us and used as described in this privacy policy.</p>
-    <h2>2. Log Data</h2>
-    <p>We want to inform you that whenever you use our Service, in a case of an error in the app we collect data and information (through third party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol ("IP") address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.</p>
-    <h2>3. Security</h2>
-    <p>We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
-    <h2>4. Links to Other Sites</h2>
-    <p>This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
-    <h2>5. Children's Privacy</h2>
-    <p>These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to do necessary actions.</p>
-    <h2>6. Changes to This Privacy Policy</h2>
-    <p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
-    <h2>7. Contact Us</h2>
-    <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at support@attendwise.example.com.</p>
-    <div class="footer">
-        &copy; 2026 AttendWise. All rights reserved.
+<div class="wrap">
+
+  <header class="hero">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 3 1.5 8.5 12 14l8.3-4.4V15h2.2V8.5L12 3Zm-6.6 9.7v3.6c0 2 3 3.7 6.6 3.7s6.6-1.7 6.6-3.7v-3.6L12 16.2l-6.6-3.5Z"/></svg>
+      </span>
+      <div>
+        <small>AttendWise</small>
+        <strong>Privacy Policy</strong>
+      </div>
     </div>
+    <h1>Your attendance is your business.</h1>
+    <p>AttendWise is built offline-first. Your subjects, attendance and notes stay on your phone. There is no account, no login and no analytics.</p>
+    <div class="chips">
+      <span class="chip">Effective 28 Oct 2026</span>
+      <span class="chip">Applies to v1.1.0+</span>
+      <span class="chip">Android</span>
+    </div>
+  </header>
+
+  <div class="summary">
+    <div class="sum">
+      <span class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>
+      <b>Stored on your device</b>
+      <span>Subjects, records, notes and settings never leave your phone.</span>
+    </div>
+    <div class="sum">
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 5-3.4 8.2-7 9-3.6-.8-7-4-7-9V6l7-3Z"/><path d="M9.5 12.5l1.8 1.8 3.4-3.6"/></svg></span>
+      <b>No account, no tracking</b>
+      <span>No email, phone number, location or analytics SDK.</span>
+    </div>
+    <div class="sum">
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></span>
+      <b>You stay in control</b>
+      <span>Export a CSV whenever you want, or erase everything by uninstalling.</span>
+    </div>
+  </div>
+
+  <section>
+    <h2><span class="num">1</span> What AttendWise stores</h2>
+    <p>Everything you create is saved in the app's private storage on your device:</p>
+    <ul>
+      <li><strong>Optional profile:</strong> a display name and course/semester you may add during setup.</li>
+      <li><strong>Subjects:</strong> names, faculty, target percentage.</li>
+      <li><strong>Attendance:</strong> dates, status (present, absent, cancelled, holiday), notes and session index.</li>
+      <li><strong>Preferences:</strong> theme, reminder schedule, alert settings.</li>
+    </ul>
+    <div class="note good">
+      <b>No cloud account</b>
+      We do not run a server that stores your attendance. There is nothing to sign in to, and no one else can read your records.
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">2</span> What we do not collect</h2>
+    <p>AttendWise does not collect or transmit:</p>
+    <ul>
+      <li>Your name, email address, phone number or contacts</li>
+      <li>Precise or approximate location</li>
+      <li>Photos, files or microphone input</li>
+      <li>Usage analytics, crash telemetry or advertising profiles (see section 4 for ads)</li>
+    </ul>
+    <p>Exporting a CSV opens your phone's share sheet. You choose where that file goes; we never receive it.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">3</span> When the app uses the internet</h2>
+    <p>The core app works fully offline. There are only three cases where a network request happens:</p>
+    <ul>
+      <li><strong>Update check:</strong> up to twice a week (Monday and Thursday) the app downloads a small version file so we can prompt you to install important fixes. This request contains no personal data.</li>
+      <li><strong>Purchases:</strong> if you buy AttendWise Pro, the transaction is handled entirely by Google Play Billing. We never see your payment details.</li>
+      <li><strong>Reminders:</strong> notifications are scheduled locally on your device; no server is involved.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">4</span> Advertising</h2>
+    <p>Some free versions of AttendWise may display ads served by <strong>Google AdMob</strong>. When ads are enabled:</p>
+    <ul>
+      <li>Google may access a device advertising identifier and approximate technical information (device model, OS version, coarse region) to serve and measure ads.</li>
+      <li>Where required by law (for example in the EEA or UK), you will be shown a consent choice before personalised ads are requested, and you can change it later in the app.</li>
+      <li>Buying AttendWise Pro removes ads.</li>
+    </ul>
+    <div class="note warn">
+      <b>Current release</b>
+      Ads are not enabled in v1.1.0. This section will apply as soon as an ad-supported update is published.
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">5</span> Data retention and deletion</h2>
+    <p>Your data remains on your device until you delete it. You can remove individual records from the subject calendar, or erase everything by clearing the app's storage in Android Settings or uninstalling AttendWise. Because we never receive your data, there is nothing for us to delete on a server.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">6</span> Children's privacy</h2>
+    <p>AttendWise is intended for college and university students and is not directed to children under 13. We do not knowingly collect personal information from children. If you believe a child has provided information through the app, contact us and we will help you remove it.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">7</span> Security</h2>
+    <p>Your records live in Android's app-private storage, protected by the operating system's sandboxing. We do not transmit them, which removes most interception risks. No method of storage is perfectly secure, so keep your device lock enabled and keep regular CSV exports if the data matters to you.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">8</span> Changes to this policy</h2>
+    <p>If the app's data practices change — for example when advertising is introduced — we will update this page and change the effective date above. Material changes will also be noted in the app's release notes. Continued use after an update means you accept the revised policy.</p>
+  </section>
+
+  <div class="contact">
+    <div>
+      <b>Questions about your data?</b>
+      <span>We usually reply within a few days.</span>
+    </div>
+    <a class="btn" href="mailto:support@attendwise.example.com">Contact support</a>
+  </div>
+
+  <footer>
+    <nav>
+      <a href="#top">Top</a>
+      <a href="https://play.google.com/store/apps/details?id=com.aisht.attend">Play Store</a>
+      <a href="mailto:support@attendwise.example.com">Email</a>
+    </nav>
+    &copy; 2026 AttendWise. All rights reserved.
+  </footer>
+</div>
 </body>
 </html>
