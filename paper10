@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#2A2166">
+<title>Privacy Policy — Class 10 Papers Solved</title>
+<style>
+  :root {
+    --indigo: #2a2166;
+    --indigo2: #41337f;
+    --amber: #d9a43a;
+    --amber2: #f0c36b;
+    --bg: #faf8f4;
+    --surface: #ffffff;
+    --line: #eae4f0;
+    --text: #241c4e;
+    --muted: #6f6a8a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }a
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .top {
+    background: linear-gradient(150deg, var(--indigo2), var(--indigo));
+    color: #fff;
+    padding: 44px 24px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .top::after {
+    content: "";
+    position: absolute;
+    top: -90px;
+    right: -80px;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(240, 195, 107, .28), transparent 66%);
+  }
+  .wrap { max-width: 780px; margin: 0 auto; position: relative; z-index: 1; }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+  .mark {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, .12);
+    border: 1px solid rgba(255, 255, 255, .2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--amber2);
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: -.5px;
+  }
+  .brand b { font-size: 14px; font-weight: 800; letter-spacing: -.2px; }
+  .brand span { display: block; font-size: 11px; color: rgba(255, 255, 255, .65); font-weight: 600; }
+  h1 { font-size: clamp(24px, 5vw, 32px); font-weight: 800; letter-spacing: -.6px; line-height: 1.25; }
+  .meta {
+    margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, .12);
+    border: 1px solid rgba(255, 255, 255, .16);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, .8);
+  }
+  .meta i {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--amber2);
+    display: inline-block;
+  }
+  main { max-width: 780px; margin: -18px auto 0; padding: 0 18px 56px; position: relative; z-index: 2; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: clamp(22px, 4vw, 38px);
+    box-shadow: 0 18px 50px rgba(42, 33, 102, .08);
+  }
+  h2 {
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: -.2px;
+    margin: 32px 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h2:first-of-type { margin-top: 4px; }
+  h2::before {
+    content: "";
+    width: 5px;
+    height: 18px;
+    border-radius: 3px;
+    background: var(--amber);
+    display: inline-block;
+  }
+  p { font-size: 14px; color: #3a3360; margin: 10px 0; }
+  ul { margin: 10px 0 10px 4px; list-style: none; }
+  li {
+    font-size: 14px;
+    color: #3a3360;
+    padding-left: 22px;
+    position: relative;
+    margin: 7px 0;
+  }
+  li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 9px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--amber);
+  }
+  .note {
+    background: #faf6ec;
+    border: 1px solid #f0e2be;
+    border-radius: 14px;
+    padding: 14px 16px;
+    margin: 18px 0;
+  }
+  .note p { margin: 0; font-size: 13px; color: #6b5a22; }
+  .note b { color: #4a3c12; }
+  a { color: var(--indigo); font-weight: 700; text-decoration: none; border-bottom: 2px solid rgba(217, 164, 58, .55); }
+  a:hover { border-bottom-color: var(--amber); }
+  .contact {
+    margin-top: 18px;
+    background: linear-gradient(150deg, #41337f, #2a2166);
+    border-radius: 16px;
+    padding: 22px 22px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .contact h3 { font-size: 14px; font-weight: 800; margin-bottom: 3px; }
+  .contact p { color: rgba(255, 255, 255, .64); font-size: 11.5px; margin: 0; font-weight: 600; }
+  .contact a {
+    background: var(--amber);
+    color: #241c4e;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+  .contact a:hover { background: var(--amber2); }
+  footer {
+    text-align: center;
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 600;
+    padding: 22px 20px 0;
+    line-height: 1.8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #171329;
+      --surface: #221c42;
+      --line: #332a5e;
+      --text: #f2eff8;
+      --muted: #9c96be;
+    }
+    body { background: var(--bg); color: var(--text); }
+    p, li { color: #d6d1e8; }
+    .note { background: #2a2440; border-color: #3a3252; }
+    .note p { color: #cfc6a6; }
+    .note b { color: #efe3c2; }
+    a { color: var(--amber2); }
+  }
+</style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <div class="brand">
+        <div class="mark">10</div>
+        <div>
+          <b>Class 10 Papers Solved</b>
+          <span>CBSE papers &amp; solutions</span>
+        </div>
+      </div>
+      <h1>Privacy Policy</h1>
+      <div class="meta"><i></i> Last updated: 2 November 2026</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>Overview</h2>
+      <p>
+        Class 10 Papers Solved is an independent study app that helps students browse
+        Class 10 CBSE previous year question papers and their official solutions.
+        This policy explains what information the app does and does not handle.
+      </p>
+      <div class="note">
+        <p><b>Short version:</b> the app collects no personal information. There are no
+        accounts, no analytics, no ads and no trackers. The only network access is to
+        download the PDF files you choose.</p>
+      </div>
+
+      <h2>Information we collect</h2>
+      <p>The app does <b>not</b> collect, store, transmit or share any personal information.</p>
+      <ul>
+        <li>No account, sign-in or profile is required.</li>
+        <li>No analytics, crash reporting, advertising or tracking SDKs are included.</li>
+        <li>No access to contacts, photos, camera, microphone, location or external files.</li>
+      </ul>
+
+      <h2>Permissions</h2>
+      <ul>
+        <li><b>Internet</b> — used only to download the PDF files you choose. PDFs are hosted on a public third-party server.</li>
+        <li>No storage or media permissions are requested. Downloaded PDFs are stored in the app's private storage on your device.</li>
+      </ul>
+
+      <h2>Downloads and data</h2>
+      <ul>
+        <li>Files you download stay on your device inside the app's private folder.</li>
+        <li>You can delete individual files or clear all downloads from the Downloads or Settings screen at any time.</li>
+        <li>Uninstalling the app removes all downloaded files.</li>
+        <li>On the web version, PDF links open in a new browser tab and only a local list of opened links is kept in your browser storage.</li>
+      </ul>
+
+      <h2>Third-party content</h2>
+      <p>
+        Question papers and solutions are published by CBSE and are provided for study
+        purposes. PDF files are hosted on an external server; your device connects
+        directly to that server when you download a paper. This app is not affiliated with,
+        endorsed by, or connected to CBSE.
+      </p>
+
+      <h2>Children's privacy</h2>
+      <p>
+        The app does not collect any data from any user, including children.
+      </p>
+
+      <h2>Changes</h2>
+      <p>
+        If this policy changes, the updated version will be published with a new app
+        release at this same address.
+      </p>
+
+      <div class="contact">
+        <div>
+          <h3>Questions about this policy?</h3>
+          <p>We usually reply within 2 working days.</p>
+        </div>
+        <a href="mailto:asnstudios.app@gmail.com?subject=Class%2010%20Papers%20Solved%20%E2%80%94%20Privacy">Email us</a>
+      </div>
+    </div>
+
+    <footer>
+      Class 10 Papers Solved &bull; asnstudios.app@gmail.com<br>
+      Question papers and solutions belong to CBSE. This is an independent, unofficial study app.
+    </footer>
+  </main>
+</body>
+</html>
